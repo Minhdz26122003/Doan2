@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/Menu/blue-box.jpg" type="image/x-icon">
+    <meta name="Taikhoan" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" type="text/css">
+    <script src="../js/bootstrap.bundle.min.js" defer></script>
+    <title>Tai Khoan</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar bg-info-subtle">
+            
+            <div class="header-left ">
+                <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tab-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="background-color: beige; display: flex; border-radius: 40px;">
+                    <button class="btn"  id="lightThemeButton" onclick="setLightTheme()">
+                        <i class="fa-regular fa-sun fa-xl "></i>
+                    </button>
+                    <button class="btn" id="darkThemeButton" onclick="setDarkTheme()">
+                        <i class="fa-solid fa-moon fa-xl "></i>
+                    </button>
+                    
+                </div>               
+            </div>
+            <div class="header-img" >
+                <a href="Tongquan.html" class="">
+                    <img class="ms-5" src="../image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                </a>
+            </div>
+            
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="" id="imglogin" style="width: 30px; height: 30px; border-radius: 100px;">
+                    <span id="tentk"></span> 
+                </button>   
+                <ul class="dropdown-menu dropdown-menu-end ">
+                    <a href="Taikhoan.html" class="link-dark link-underline-opacity-0">
+                        <li><button class="dropdown-item" type="button"><i class="fa-solid fa-user-alt"></i>Thông tin tài Khoản</button></li>
+                    </a>
+              
+                    <a href="" class="link-dark link-underline-opacity-0">
+                        <li><button class="dropdown-item" type="button" onclick="Logout()"><i class="fa-solid fa-sign-out"></i> Đăng Xuất</button></li>
+                    </a>
+                </ul>
+            </div>
+           
+        </nav>
+    </section>
+
+    <sectiton>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tendn">
+                        
+                    </div>
+                    <div class="tentk">
+
+                    </div>
+                    <div class="anh">
+
+                    </div>
+                    <div class="Sdt">
+
+                    </div>
+                    <div class="Email">
+
+                    </div>
+                    <div class="pass">
+
+                    </div>
+                    <div class="quyen">
+
+                    </div>
+                    <div class="trangthai">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </sectiton>
+</body>
+
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta name="Vongtay" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>    
+    <script src="Js/jquery-3.6.0.min.js" defer ></script>
+    <link rel="stylesheet" href="css/stylechung.css" type="text/css">
+    <script src="Js/Locproc.js" defer></script>
+    <script src="Js/Sort.js" defer></script>
+    <script src="Js/Cart.js" defer></script>
+    <script src="Js/getsp.js" defer></script>
+    <title>Vòng tay</title>
+</head>
+<body>
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+    <section class="list">
+        <div class="container">
+            <div  class="mt-5">
+                <h3 class="text-center fw-light ">Vòng tay</h3>               
+            </div>
+            <div class="row mt-3 justify-content-center">                                
+                <div class="col-md-3 col-sm-6 col-6 text-center">
+                    <a href="#"  class="link-body-emphasis link-underline-opacity-0 link-dark"> 
+                        <img src="image/Vòng tay/QuickLink_464x464_ChainBracelets.jfif" alt="" style="max-width:80%; height: auto;">
+                        <h5>Thiết kế liên kết chuỗi</h5>
+                    </a>
+                    
+                </div>
+                <div class=" col-md-3 col-sm-6 col-6 text-center">
+                    <a href="#" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Vòng tay/QuickLink_464x464_BangleBracelets.jfif" alt="" style="max-width: 80%; height: auto;">
+                        <h5>Vòng tay cổ điển</h5>
+                    </a>
+                    
+                </div>
+                <div class=" col-md-3 col-sm-6 col-6 text-center">
+                    <a href="#" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Vòng tay/QuickLink_464x464_CuffBracelets.jfif" alt="" style="max-width: 80%; height: auto;">
+                        <h5>Cá tính độc đáo</h5>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6 text-center">
+                    <a href="#" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Vòng tay/QuickLink_464x464_StackingBracelets.jfif" alt="" style="max-width: 80%; height: auto;">
+                        <h5>Sắp xếp lớp</h5>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="link">
+                    <a href="Trangchu.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                        Trang chủ
+                    </a>
+                    <span>
+                        <a href="Vongtay.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                            / Vòng tay
+                        </a>
+                    </span>
+                
+                </div>
+                
+                <div class="Sort d-inline-flex">
+                    <span class="float-start">Sắp Xếp Theo</span> 
+                    <select class="form-select" id="priceFilter" onchange="sortProducts()">
+                        <option value="All">Tất cả sản phẩm</option>
+                        <option value="lowToHigh">Theo giá :Thấp đến Cao</option>
+                        <option value="highToLow">Theo giá :Cao đến Thấp</option>
+                        <option value="newest">Hàng Mới Nhất</option>
+                    </select>
+                    
+                </div> 
+            </div>          
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="container">
+            <div class="row">               
+                <div class="loc col-md-2 col-sm-11 col-11 bg-body-tertiary">
+                    <h4 class="pt-3 fw-bold">Bộ lọc tìm kiếm</h4><hr>
+                    <div class="kieudang py-2" id="kieudang">
+                        <h5>Kiểu Dáng</h5>
+                        <form id="kieudang-form">
+                            <input type="checkbox" class="form-check-input" name="kieudang" value="Thiết kế liên kết chuỗi"> Thiết kế liên kết chuỗi<br>
+                            <input type="checkbox" class="form-check-input" name="kieudang" value="Vòng tay cổ điển"> Vòng tay cổ điển<br>
+                            <input type="checkbox" class="form-check-input" name="kieudang" value="Cá tính độc đáo"> Cá tính độc đáo<br>
+                            <input type="checkbox" class="form-check-input" name="kieudang" value="Sắp xếp lớp"> Sắp xếp lớp<br>
+                        </form>
+                    </div>
+                    <hr>
+                    
+                    <div class="vatlieu py-2">
+                        <h5>Vật Liệu</h5>
+                        <form id="vatlieu-form">
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Vàng hồng"> Vàng hồng<br>
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Bạch kim"> Bạch kim<br>
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Bạc"> Bạc<br>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="giaban py-2">
+                        <h5>Giá Bán</h5>
+                        <form id="giaban-form">  
+                            <input type="checkbox" class="form-check-input" name="giaban" value="1000000">Từ 1.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="6000000">Từ 6.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="8000000">Từ 8.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="10000000">Từ 10.000.000<br>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="Vongtay-list col-md-10 col-sm-11">
+                    <div class="row justify-content-start" id="productList">
+
+                        <!-- <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Thiết kế liên kết chuỗi" data-vatlieu="Bạc" data-giaban="1860000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-1837-makers-18k-63448966_1003720_ED_M (1).webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay liên kết rộng Tiffany 1837® Makers bằng bạc sterling và vàng hồng 18k, cỡ trung bình.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">2.500.000</span>
+                                    <span class="new-price float-end" >1.860.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'25',image:'image/Vòng tay/tiffany-1837-makers-18k-63448966_1003720_ED_M (1).webp', price:1860000, name:'Vòng tay liên kết rộng Tiffany 1837® Makers bằng bạc sterling và vàng hồng 18k, cỡ trung bình.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>    
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Thiết kế liên kết chuỗi" data-vatlieu="Vàng hồng" data-giaban="13018880">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-1837-makers-18k-63448982_1003258_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay mắt xích hẹp Tiffany 1837® Makers bằng vàng hồng 18k, cỡ vừa.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">14.000.000</span>
+                                    <span class="new-price float-end" >13.018.880<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'26',image:'image/Vòng tay/tiffany-1837-makers-18k-63448982_1003258_ED_M.webp', price:13018880, name:'Vòng tay mắt xích hẹp Tiffany 1837® Makers bằng vàng hồng 18k, cỡ vừa.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>    
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Thiết kế liên kết chuỗi" data-vatlieu="Bạc" data-giaban="1530000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-1837makers-id-63526576_1001380_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng đeo tay liên kết ID bằng bạc Tiffany 1837™ Makers, cỡ trung bình.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">2.000.000</span>
+                                    <span class="new-price float-end" >1.530.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'27',image:'image/Vòng tay/tiffany-1837makers-id-63526576_1001380_ED_M.webp', price:1530000, name:'Vòng đeo tay liên kết ID bằng bạc Tiffany 1837™ Makers, cỡ trung bình.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>                       
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Vòng tay cổ điển" data-vatlieu="Bạch kim" data-giaban="5050000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-t-t1-68127378_1058596_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay kim cương rộng vàng trắng Tiffany T series T1 18K, size nhỏ.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">6.000.000</span>
+                                    <span class="new-price float-end" >5.050.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'28',image:'image/Vòng tay/tiffany-t-t1-68127378_1058596_ED_M.webp', price:5050000, name:'Vòng tay kim cương rộng vàng trắng Tiffany T series T1 18K, size nhỏ.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>                       
+                      
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Cá tính độc đáo" data-vatlieu="Vàng hồng" data-giaban="3000000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/elsa-peretti-open-heart-34507589_956185_ED.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay Open Heart bằng vàng hồng Elsa Peretti® 18K, cỡ trung bình.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">4.000.000</span>
+                                    <span class="new-price float-end" >3.303.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'29',image:'image/Vòng tay/elsa-peretti-open-heart-34507589_956185_ED.webp', price:3303000, name:'Vòng tay Open Heart bằng vàng hồng Elsa Peretti® 18K, cỡ trung bình.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>  
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Cá tính độc đáo" data-vatlieu="Bạc" data-giaban="1020000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/return-to-tiffany-multi-heart-tag-35236147_1029163_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay bạc Sterling nhiều hình trái tim dòng Tiffany™</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">2.200.000</span>
+                                    <span class="new-price float-end" >1.200.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'30',image:'image/Vòng tay/return-to-tiffany-multi-heart-tag-35236147_1029163_ED_M.webp', price:1020000, name:'Vòng tay bạc Sterling nhiều hình trái tim dòng Tiffany™'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>                      
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Vòng tay cổ điển" data-vatlieu="Vàng hồng" data-giaban="26200000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-victoria-32948243_993674_ED.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay dây kim cương và vàng hồng Tiffany Victoria™ 18K.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">27.200.000</span>
+                                    <span class="new-price float-end" >26.200.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'31',image:'image/Vòng tay/tiffany-victoria-32948243_993674_ED.webp', price:26200000, name:'Vòng tay dây kim cương và vàng hồng Tiffany Victoria™ 18K.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Vòng tay cổ điển" data-vatlieu="Bạch kim" data-giaban="87000000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-victoria-35092919_993677_ED.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay cụm hoa Tiffany Victoria™ bằng bạch kim và kim cương.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">89.000.000</span>
+                                    <span class="new-price float-end" >87.877.440<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'32',image:'image/Vòng tay/tiffany-victoria-35092919_993677_ED.webp', price:87877440, name:'Vòng tay cụm hoa Tiffany Victoria™ bằng bạch kim và kim cương.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Sắp xếp lớp" data-vatlieu="Vàng hồng" data-giaban="15000000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-victoria-69524419_1028943_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay bản lề hình cây nho đính kim cương vàng hồng Tiffany Victoria™ 18K.</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">15.660.000</span>
+                                    <span class="new-price float-end" >14.646.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'33',image:'image/Vòng tay/tiffany-victoria-69524419_1028943_ED_M.webp', price:14646000, name:'Vòng tay bản lề hình cây nho đính kim cương vàng hồng Tiffany Victoria™ 18K.'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+                        <div class="product Vongtay col-md-3 col-sm-6  col-11" data-kieudang="Sắp xếp lớp" data-vatlieu="Vàng hồng" data-giaban="7800000">
+                            <div class="Vongtay-img">
+                                <img src="image/Vòng tay/tiffany-victoria-69525121_1031111_ED_M.webp" alt="">
+                            </div>
+                            <div class="Vongtay-info">
+                                <div><header>Vòng tay cuộn dây kim cương màu vàng hồng Tiffany Victoria™ 18K</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">9.660.000</span>
+                                    <span class="new-price float-end" >7.810.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'34',image:'image/Vòng tay/tiffany-victoria-69525121_1031111_ED_M.webp', price:7810000, name:'Vòng tay cuộn dây kim cương màu vàng hồng Tiffany Victoria™ 18K'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div> -->
+                  
+                  
+                    </div>
+
+                    <nav class="my-5" aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                          </li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link link-dark" href="#">Next</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hint">
+        <div class="container mb-5">
+            <div class="mt-5">
+                <h4 class="text-center fw-bold " >Cửa hàng theo thể loại</h4>
+                <h5 class="text-center " style="font-size:13px;">Thiết kế nổi bật và tay nghề tinh tế.</h5>
+            </div>
+            <div class="row mt-3 justify-content-center">                                
+                <div class="pro-list col-md-4 col-sm-4 col-12 text-center">
+                    <a href="Daychuyen.html"  class="link-body-emphasis link-underline-opacity-0 link-dark"> 
+                        <img src="image/Vòng tay/2023-SO_QL-464x464-Necklaces.jfif">
+                        <h5>Dây chuyền và mặt dây chuyền</h5>
+                    </a>
+                    
+                </div>
+                <div class="pro-list col-md-4 col-sm-4 col-12 text-center">
+                    <a href="Khuyentai.html" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Menu/Earrings.webp">
+                        <h5>Khuyên tai</h5>
+                    </a>
+                    
+                </div>
+    
+                <div class="pro-list col-md-4 col-sm-4 col-12 text-center">
+                    <a href="Nhan.html" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Menu/Rings.webp">
+                        <h5>Nhẫn</h5>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="mota">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="thongtin">
+                        <header class="fw-semibold fs-3">Vòng tay</header>
+                        <p class="">Vòng đeo tay Tiffany áp dụng hình dáng và thiết kế cổ điển, vượt qua những dàng buộc và mạnh dạn đổi mới.
+                            Vòng tay kim cương, vòng tay có dây xích và viền vòng tay được đánh bóng - kiểu dáng phối hợp nổi bật mang lại vẻ quyến rũ.
+                            Vòng tay rộng có cá tính nổi bật, đơn giản và thanh lịch. 
+                            Những chiếc vòng tay đẹp khách nhau tinh tế hơn và toát lên sự khéo léo trong thiết kế. </p>
+                    </div>
+                    <div class="link ">
+                        <a href="Daychuyen.html" class=" link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark me-3">
+                            Mua sắm dây chuyền và mặt dây chuyền>
+                        </a>                       
+                        <span>
+                            <a href="Khuyentai.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark me-3">
+                               Mua sắm khuyên tai>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="Nhan.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark me-3">
+                               Mua sắm nhẫn>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" >
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form action="#">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Gọi hàm loadProducts để hiển thị sản phẩm
+        loadProducts(24,34); // Điều chỉnh startIndex và endIndex theo nhu cầu của bạn
+    });
+</script>
+</html>

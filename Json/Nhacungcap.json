@@ -1,0 +1,32 @@
+{
+    "Nhacungcap": [     
+      {
+        "idncc": "Ncc1",
+        "tenncc":"Harry Winston",
+        "sdtncc":"3147200309",
+        "emailncc":"clientcareharrywinston@gmail.com",
+        "diachincc":"29, Đại lộ Montaigne75008 Paris, Pháp"
+      },
+      {
+        "idncc": "Ncc2",
+        "tenncc":"Cartier",
+        "sdtncc":"0274089192",
+        "emailncc":"clientcarecartier@gmail.com",
+        "diachincc":"BOUTIQUE CARTIER LONDON NEW BOND STREET"
+      },
+      {
+        "idncc": "Ncc3",
+        "tenncc":"Buccellati",
+        "sdtncc":"0289040511",
+        "emailncc":"info@buccellati.com",
+        "diachincc":"Via Brisa 5, 20123 Milano"
+      },
+      {
+        "idncc": "Ncc4",
+        "tenncc":"Van Cleef & Arpels",
+        "sdtncc":"8778262533",
+        "emailncc":"infoVanCleefArpels@gmail.com",
+        "diachincc":"9, Rue de la MonnaieParis 75001  France"
+      }
+    ]
+}

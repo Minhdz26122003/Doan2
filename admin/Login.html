@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Login" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" type="text/css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <title>Quản lý web bán trang sức</title>
+    <style>
+        
+        body{
+            background-image: url('img/2022_AS-CUSTOMERSERVICE-LP-FWMH-1-Desktop.jpg');
+            background-size:400vh;
+            
+            background-repeat: no-repeat; 
+            height: 100vh;
+            
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        form {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section >
+        <form id="frmlogin">
+            <div class="h1 mb-5 text-black">Đăng nhập</div>
+            <div class="d-flex align-items-center mb-3">
+                <label for="tk"><i class="fa-solid fa-user fa-xl"></i></label>
+                <input class="form-control" type="text" name="tk" id="tk" placeholder="Nhập email hoặc số điện thoại đăng ký...." style="width:400px;" required>
+            </div>
+            <div class="d-flex align-items-center">
+                <label for="mk"><i class="fas fa-lock fa-xl"></i></label>
+                <input class="form-control" type="password" name="mk" id="mk" placeholder="Nhập mật khẩu..." style="width:400px;" required>
+            </div>
+            <div class="float-end">
+                <a class="link-dark link-underline-opacity-0 link-underline-opacity-25-hover fw-bolder " href="misspass.html">Quên mật khẩu</a>
+            </div>
+            <div class="mt-5">
+                <input class="btn btn-secondary" type="submit" value="Đăng nhập">
+            </div>
+
+        </form>
+    </section>
+    
+</body>
+
+</html>

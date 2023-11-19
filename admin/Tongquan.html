@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../image/Menu/blue-box.jpg" type="image/x-icon">
+    <meta name="Tongquan" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Tongquan.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
+    <script src="../js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/loadNcc.js" defer></script>
+    <script src="js/loadlsp.js" defer></script>
+    <script src="js/loadspadmin.js" defer></script>
+    <title>Quản lý web bán trang sức</title>
+    
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar bg-info-subtle">
+            
+            <div class="header-left ">
+                <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tab-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="background-color: beige; display: flex; border-radius: 40px;">
+                    <button class="btn"  id="lightThemeButton" onclick="setLightTheme()">
+                        <i class="fa-regular fa-sun fa-xl "></i>
+                    </button>
+                    <button class="btn" id="darkThemeButton" onclick="setDarkTheme()">
+                        <i class="fa-solid fa-moon fa-xl "></i>
+                    </button>
+                    
+                </div>               
+            </div>
+            <div class="header-img" >
+                <a href="Tongquan.html" class="">
+                    <img class="ms-5" src="../image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                </a>
+            </div>
+            
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="" id="imglogin" style="width: 30px; height: 30px; border-radius: 100px;">
+                    <span id="tentk"></span> 
+                </button>   
+                <ul class="dropdown-menu dropdown-menu-end ">
+                    <a href="Taikhoan.html" class="link-dark link-underline-opacity-0">
+                        <li><button class="dropdown-item" type="button"><i class="fa-solid fa-user-alt"></i>Thông tin tài Khoản</button></li>
+                    </a>
+              
+                    <a href="" class="link-dark link-underline-opacity-0">
+                        <li><button class="dropdown-item" type="button" onclick="Logout()"><i class="fa-solid fa-sign-out"></i> Đăng Xuất</button></li>
+                    </a>
+                </ul>
+            </div>
+           
+        </nav>
+    </section>
+    
+    <section>    
+        <div class=" menu-left d-flex navbar-expand-md " style="height: 100vh;">
+            <div class="tabar flex-column nav nav-pills collapse navbar-collapse" id="tab-menu" role="tablist" aria-orientation="vertical" style="width: 190px;">
+              <button class=" nav-link active" id="Tongquan-tab" data-bs-toggle="pill" data-bs-target="#Tongquan" type="button" role="tab" aria-selected="false"><i class="fas fa-tachometer-alt"></i> Tổng Quan</button>
+              <button class="nav-link " id="LoaiSP-tab" data-bs-toggle="pill" data-bs-target="#LoaiSP" type="button" role="tab"  aria-selected="false"><i class="fas fa-boxes"></i>Loại Sản Phẩm</button>
+              <button class="nav-link " id="SanPham-tab" data-bs-toggle="pill" data-bs-target="#SanPham" type="button" role="tab" aria-selected="false"><i class="fas fa-barcode"></i>Sản Phẩm</button>
+              <button class="nav-link" id="NhaCungCap-tab" data-bs-toggle="pill" data-bs-target="#NhaCungCap" type="button" role="tab" aria-selected="false"><i class="fas fa-truck"></i>Nhà Cung Cấp</button>
+              <button class="nav-link" id="KhachHang-tab" data-bs-toggle="pill" data-bs-target="#KhachHang" type="button" role="tab" aria-selected="false"><i class="fas fa-users"></i>Khách Hàng</button>
+              <button class="nav-link" id="Nhanvien-tab" data-bs-toggle="pill" data-bs-target="#Nhanvien" type="button" role="tab" aria-selected="false"><i class="fas fa-user"></i>Nhân viên</button>
+              <button class="nav-link" id="HoaDonNhap-tab" data-bs-toggle="pill" data-bs-target="#HoaDonNhap" type="button" role="tab" aria-selected="false"><i class="fas fa-file-import"></i>Hóa Đơn Nhập</button>
+              <button class="nav-link" id="HoaDonBan-tab" data-bs-toggle="pill" data-bs-target="#HoaDonBan" type="button" role="tab" aria-selected="false"><i class="fas fa-shopping-cart"></i>Hóa Đơn Bán</button>
+              <button class="nav-link" id="ThietLap-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-selected="false"><i class="fas fa-cogs"></i>Thiết Lập</button>
+            </div>
+
+            <div class="tab-content w-100" id="tabContent">
+                <!-- 1 -->
+              <div class="tab-pane fade  active show" id="Tongquan" role="tabpanel" tabindex="0">
+                    <div class="container-fluid">
+
+                        <div class="row ">
+                            <div class="title fw-bold mt-3" >
+                                <i class="fas fa-signal"></i> Hoạt động hôm nay
+                                <hr>
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="box-1 " style="background-color: #9abc32;">
+                                    <div class="box-1-icon"><i class="fas fa-signal"></i></div>
+                                    <div class="box-1-text">Tiền bán hàng<br><span>0</span>đ</div>
+                                </div>
+                            
+                            
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="box-1 " style="background-color: #6FB3E0;">
+                                    <div class="box-1-icon"><i class="fas fa-cloud"></i></div>
+                                    <div class="box-1-text">
+                                        Số đơn hàng: <span>0</span><br>
+                                        Số sản phẩm: <span>0</span>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="box-1 " style="background-color: #D53F;">
+                                    <div class="box-1-icon"><i class="fas fa-undo-alt"></i></div>
+                                    <div class="box-1-text">Khách hàng trả<br><span>0</span></div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="box-2" style="border: 1px #9abc32 solid  ;">
+                                    <div class="box-2-top" style="border-bottom: 1px #9abc32 solid  ;">
+                                        <i class="fas fa-signal"></i> Hoạt động
+                                    </div>
+                                    <div class="box-2-bot">
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Tiền bán hàng</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div  class="box-2-bot-around">
+                                             <div class="box-2-bot-left">Số đơn hàng</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Số sản phẩm</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Khách trả hàng</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="box-2"  style="border: 1px  #6FB3E0 solid  ;">
+                                    <div class="box-2-top" style="border-bottom: 1px  #6FB3E0 solid  ;">
+                                        <i class="fas fa-boxes"></i> Thông tin kho
+                                    </div>
+                                    <div class="box-2-bot">
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Tồn kho</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                             <div class="box-2-bot-left">Hết hàng</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                             <div class="box-2-bot-left">Sắp hết hàng</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Vượt định mức</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="box-2" style="border: 1px #D53F solid ;" >
+                                    <div class="box-2-top" style="border-bottom: 1px #D53F solid ;">
+                                        <i class="fas fa-boxes"></i> Thông tin sản phẩm
+                                    </div>
+                                    <div class="box-2-bot">
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Sản phẩm</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Chưa làm giá bán</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Chưa nhập giá mua</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        <div class="box-2-bot-around">
+                                            <div class="box-2-bot-left">Hàng chưa phân loại</div>
+                                            <div class="box-2-bot-right">0</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+              <!-- 2 --->
+              <div class="tab-pane fade  w-100" id="LoaiSP" role="tabpanel"  tabindex="0">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="List-TypeProc col-12 mt-3">
+                                <div class="title">
+                                    <i class="fas fas fa-boxes"></i> Danh sách loại sản phẩm
+                                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_LSP">
+                                        <i class="far fa-add"></i>
+                                        Thêm Loại Sản Phẩm
+                                    </button>
+                                    <hr>
+                                </div>
+
+                                <div class="modal fade" id="Modal_LSP"aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i>Nhập thông tin loại sản phẩm </h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="TypeProc-Infor col-12">
+                                                        <form>
+                                                            <div class="mb-2">
+                                                                <label>Mã loại sản phẩm:</label>
+                                                                <input class="form-control" type="text" id="maloai" placeholder="Nhập mã loại sản phẩm..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tên loại sản phẩm:</label>
+                                                                <input class="form-control" type="text" id="tenloai" placeholder="Nhập tên loại sản phẩm..." required>
+                                                            </div>
+                                                        
+                                                            <button class="btn btn-success" onclick="NhapMoiLSP()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()">Thêm loại sản phẩm</button>
+                                                            
+                                                            <hr>
+                                                        </form>
+                                                    </div>                       
+                                                </div>
+                                            </div>                
+                                        </div>                                       
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <div class="find-list">
+                                    <form action=" " >
+                                        <div class=" d-flex justify-content-between">
+                                                <input class="form-control" type="text" id="search-product-type" style="width: 600px;" placeholder="Nhập mã, tên loại sản phẩm...">                                   
+                                                <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                        </div>
+                                        <table class="table table-hover table-bordered mt-3">
+                                            <thead>
+                                                <tr>                                                  
+                                                    <th class="idloai">Mã loại sản phẩm</th>
+                                                    <th class="nameloai">Tên loại sản phẩm</th>
+                                                    <th class="text-center">Thao tác</th>
+                                                </tr>
+                                            </thead>
+                                            
+                                            <tbody id="Lsplist">
+                                                
+                                                <!-- <tr>
+                                                    <td>
+                                                        <input type="checkbox"value="" id="">
+                                                    </td>
+                                                    <td>555551</td>
+                                                    <td>Dây Chuyền</td>
+                                                    <td class="text-center">
+                                                        <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                        <i class="fas fa-trash-alt" title="Xóa" onclick=""></i>
+                                                    </td>
+                                                </tr> -->
+                                            </tbody>
+                                        </table>
+
+                                    </form>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              
+              <!-- 3 --->
+              <div class="tab-pane fade  w-100" id="SanPham" role="tabpanel"  tabindex="0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="List-Proc col-12 mt-3">
+                            <div class="title">
+                                <i class="fas fas fa-boxes"></i> Danh sách sản phẩm
+                                 <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_SanPham">
+                                    <i class="far fa-add"></i>
+                                    Thêm Sản Phẩm
+                                </button> 
+                                <hr>                                                                       
+                            </div>
+
+                            <div class="modal fade" id="Modal_SanPham"aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin sản phẩm</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="Proc-Infor col-12">                            
+                                                    <form action="#">
+                                                        <div class="mb-2">
+                                                            <label>Loại sản phẩm:</label>
+                                                            <div>
+                                                                <select class="form-select" name="loaisp" id="loaisp">
+                                                                   
+                                                                </select>
+                                                            </div>
+                                                    
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <label>Nhà Cung Cấp:</label>
+                                                            <div>
+                                                                <select class="form-select" name="ncc" id="ncc">
+                                                                   
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <label>Mã sản phẩm:</label>
+                                                            <input class="form-control" type="text" id="masp" placeholder="Nhập mã sản phẩm..." required>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <label>Tên sản phẩm:</label>
+                                                            <input class="form-control" type="text" id="tensp" placeholder="Nhập tên sản phẩm..." required>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <label>Hình ảnh:</label>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <input type="file" id="imginput" onchange="previewImage()" required>
+                                                            <div>
+                                                                <span class="float-start">View:</span>
+                                                                <img class="mx-3 my-3 " id="viewimg" style="max-width:180px;max-height:180px">
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="mb-2">
+                                                            <label>Số lượng:</label>
+                                                            <input class="form-control" min="0" type="number" id="slsp" placeholder="Nhập số lượng..." required>
+                                                        </div>
+                                                        <div class="mb-2">
+                                                            <label>Giá bán:</label>
+                                                            <input class="form-control" min="0" type="number" id="giaban" placeholder="Nhập giá bán..." required>
+                                                        </div>
+                                                    
+                                                        
+                                                        <button class="btn btn-success" onclick="NhapMoiSP()">Nhập mới</button>
+                                                        <button type="submit" class="btn btn-primary" onclick="ThemSP()">Thêm sản phẩm</button>
+                                                        
+                                                        <hr>
+                                                    </form>
+                                                </div>                      
+                                            </div>
+                                        </div>                
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+                            <div class="find-list">
+                            
+                                <div class="d-flex justify-content-between">
+                                    <input class="form-control" type="text" id="search-product-type"
+                                        placeholder="Nhập mã, tên sản phẩm...">
+                                   
+                                    <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                </div>
+
+                                <table class="table table-hover table-bordered mt-3">
+                                    <thead>
+                                        <tr>                                          
+                                            <th>Mã sản phẩm</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Hình ảnh</th>
+                                            <th>Số lượng</th>
+                                            <th>Giá bán</th>
+                                            <th>Loại sản phẩm</th>
+                                            <th>Nhà cung cấp</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody id="productListadmin">
+                                        <!-- <tr>
+                                            <td><input type="checkbox" value=""></td>
+                                            <td class="id">1</td>
+                                            <td class="name">Vòng cổ tô điểm màu của Yard</td>
+                                            <td class="img-sp" style="width: 100px;height:100px;">
+                                                <img src="">
+                                            </td>
+                                            <td class="soluong" style="text-align: center;">20</td>
+                                            <td class="price" style="text-align: right;">48900000</td>
+                                            <td class="Loaisp">Vòng Cổ</td>
+                                            <td class="Ncc">2</td>
+                                            <td style="text-align: center;">
+                                                <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                <i class="fas fa-trash-alt" title="Xóa"></i>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+              </div>
+
+              <!-- 4 --->
+              <div class="tab-pane fade w-100" id="NhaCungCap" role="tabpanel"  tabindex="0">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="List-Ncc col-12 mt-3">
+                            <div class="title">
+                                <i class="fas fas fa-boxes"></i> Danh sách nhà cung cấp
+                                <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_Ncc">
+                                    <i class="far fa-add"></i>
+                                    Thêm Nhà Cung Cấp
+                                </button> 
+                                <hr>
+                            </div>
+
+                            <div class="modal fade" id="Modal_Ncc" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhà cung cấp</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="Ncc-Infor col-12">
+                                                        <form action="#">
+                                                            <div class="mb-2">
+                                                                <label>Mã Nhà Cung Cấp:</label>
+                                                                <input class="form-control" type="text" id="mancc"
+                                                                    placeholder="Nhập mã nhà cung cấp" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tên Nhà Cung Cấp:</label>
+                                                                <input class="form-control" type="text" id="tenncc"
+                                                                    placeholder="Nhập tên nhà cung cấp" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Số Điện Thoại:</label>
+                                                                <input class="form-control" type="text" id="sdtncc" placeholder="Nhập số điện thoại..."
+                                                                    required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Email:</label>
+                                                                <input class="form-control" type="email" id="emailncc" placeholder="Nhập email..."
+                                                                    required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Địa Chỉ:</label>
+                                                                <input class="form-control" type="text" id="diachincc" placeholder="Nhập địa chỉ..."
+                                                                    required>
+                                                            </div>
+                            
+                                                            <button class="btn btn-success" onclick="NhapMoiNcc()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemNCC()">Thêm nhà cung cấp</button>
+                                                            <hr>
+                            
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="find-list">                           
+                                <div class="d-flex justify-content-between">
+                                    <input class="form-control" type="text" id="search-product-type" style="width: 600px;"
+                                        placeholder="Nhập mã, tên nhà cung cấp...">
+
+                                    <button class="btn btn-primary float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                </div>
+
+                                <table class="table table-hover table-bordered mt-3">
+                                    <thead>
+                                        <tr>                                           
+                                            <th>Mã nhà cung cấp</th>
+                                            <th>Tên nhà cung cấp</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Email</th>
+                                            <th>Địa Chỉ</th>
+                                            <th>Thao Tác</th>
+                                         
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody id="Nhacungcaplist">
+                                        <!-- <tr>
+                                            <td><input type="checkbox" value=""></td>
+                                            <td class="idncc">1</td>
+                                            <td class="name-ncc">Vòng cổ tô điểm màu của Yard</td>
+                                            
+                                            <td class="sdt">0987526123</td>
+                                            <td class="email">nnnnnnnnnnnnnnnn</td>
+                                            <td class="diachi">jhjhhjhjhjhjhj</td>
+                                           
+                                            <td style="text-align: center;">
+                                                <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                <i class="fas fa-trash-alt" title="Xóa"></i>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+               <!-- 5 --->
+              <div class="tab-pane fade w-100" id="KhachHang" role="tabpanel"  tabindex="0">
+                    <div class="container-fluid">
+                        <div class="row">                    
+                            <div class="List-Kh col-12 mt-3">
+                                <div class="title">
+                                    <i class="fas fas fa-boxes"></i> Danh sách khách hàng
+                                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_Kh">
+                                        <i class="far fa-add"></i>
+                                        Nhập thông tin khách hàng
+                                    </button> 
+                                    <hr>
+                                </div>
+                                
+                                <div class="modal fade" id="Modal_Kh"aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhà cung cấp</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">                        
+                                                    <div class="Kh-Infor col-12 ">                      
+                                                        <form action="#">
+                                                            <div class="mb-2">
+                                                                <label>Mã Khách Hàng:</label>
+                                                                <input class="form-control" type="text" id="makh" placeholder="Nhập mã khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tên Khách Hàng:</label>
+                                                                <input class="form-control" type="text" id="tenkh" placeholder="Nhập tên khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Số Điện Thoại:</label>
+                                                                <input class="form-control" type="text" id="sdt" placeholder="Nhập số điện thoại..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Email:</label>
+                                                                <input class="form-control" type="email" id="email" placeholder="Nhập email..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Địa Chỉ:</label>
+                                                                <input class="form-control" type="text" id="diachi" placeholder="Nhập địa chỉ..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Mật Khẩu:</label>
+                                                                <input class="form-control" type="password" id="password" placeholder="Nhập mật khẩu..." required>
+                                                            </div>
+                                                            <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin khách hàng</button>
+                                                            
+                                                            <hr>
+                                                        </form>
+                                                    </div>
+                                                </div>                
+                                            </div>     
+                                        </div>
+                                      </div>   
+                                    </div>
+                                </div>
+
+                                <div class="find-list">
+                                
+                                    <div class="d-flex justify-content-between">
+                                        <input class="form-control" type="text" id="search-product-type" style="width: 600px;"
+                                            placeholder="Nhập mã, tên khách hàng...">
+                                        
+                                        
+                                        <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                    </div>
+    
+                                    <table class="table table-hover table-bordered mt-3">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th>Mã khách hàng</th>
+                                                <th>Tên khách hàng</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Email</th>
+                                                <th>Địa Chỉ</th>
+                                                <th>Thao Tác</th>
+                                             
+                                            </tr>
+                                        </thead>
+                                
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" value=""></td>
+                                                <td class="idkh">1</td>
+                                                <td class="name-kh">Vòng cổ tô điểm màu của Yard</td>
+                                                
+                                                <td class="sdt">0987526123</td>
+                                                <td class="email">nnnnnnnnnnnnnnnn</td>
+                                                <td class="diachi">jhjhhjhjhjhjhj</td>
+                                               
+                                                <td style="text-align: center;">
+                                                    <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+               <!--6 --->
+               <div class="tab-pane fade w-100" id="Nhanvien" role="tabpanel"  tabindex="0">                
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="List-Ncc col-12 mt-3">
+                            <div class="title ">
+                                <i class="fas fas fa-boxes"></i> Danh sách nhân viên
+                                <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_Nhanvien">
+                                    <i class="far fa-add"></i>
+                                    Thêm Nhân Viên
+                                </button>
+                                <hr>
+                            </div>
+                            <div class="modal fade" id="Modal_Nhanvien"aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhân viên</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="Nv-Infor col-12">                           
+                                                    <div class="if-body">
+                                                        <form action="#">
+                                                            <div class="mb-2">
+                                                                <label >Mã Nhân Viên:</label>
+                                                                <input class="form-control" type="text" id="manv" placeholder="Nhập mã khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label >Tên Nhân Viên:</label>
+                                                                <input class="form-control" type="text" id="tennv" placeholder="Nhập tên khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label >Hình ảnh:</label>  
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <input type="file" class="imginput" onchange="previewImage()"required>
+                                                                <div>
+                                                                    <span class="float-start">View:</span>
+                                                                    <img class="mx-3 my-3 viewimg" style="max-width:180px;max-height:180px">
+                                                                </div>
+                                                            </div>           
+                                                            <div class="mb-2">
+                                                                <label>Số Điện Thoại:</label>
+                                                                <input class="form-control" type="text" id="sdt" placeholder="Nhập số điện thoại..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Email:</label>           
+                                                                <input class="form-control" type="email" id="email" placeholder="Nhập email..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label >Địa Chỉ:</label>
+                                                                <input class="form-control" type="text" id="diachi" placeholder="Nhập địa chỉ..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label >Quyền:</label>
+                                                                <select class="form-select" name="quyen" id="quyen">
+                                                                    <option value="Quanly">Quản lý</option>
+                                                                    <option value="Nhanvien">Nhân viên</option>       
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label >Trạng thái:</label>
+                                                                <select class="form-select" name="trangthai" id="trangthai">
+                                                                    <option value="hoatdong">Hoạt động</option>
+                                                                    <option value="Khonghoatdong">Không hoạt động</option>       
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Mật Khẩu:</label>
+                                                                <input class="form-control" type="password" id="password" placeholder="Nhập mật khẩu..." required>
+                                                            </div>
+                                                            <hr>
+                                                            <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin nhân viên</button>
+                                                            
+                                                        </form> 
+                                                    </div>               
+                                                </div>
+                                            </div>
+                                        </div>                
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                            <div class="find-list">                           
+                                <div class="d-flex justify-content-between">
+                                    <input class="form-control" type="text" id="search-product-type" style="width: 600px;"
+                                        placeholder="Nhập mã, tên nhân viên...">
+                                    
+                                    
+                                    <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                </div>
+
+                                <table class="table table-hover table-bordered mt-3">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>Mã nhân viên</th>
+                                            <th>Tên nhân viên</th>
+                                            <th>Ảnh</th>
+                                            <th>Email</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Địa Chỉ</th>
+                                            <th>Quyền</th>
+                                            <th>Trạng thái</th>                                           
+                                            <th>Thao Tác</th>
+                                         
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" value=""></td>
+                                            <td class="idnv">1</td>
+                                            <td class="name-nv">Nguyen thi a</td>        
+                                            <td class="img-sp">
+                                                <img src="">
+                                            </td>                                   
+                                            <td class="email">nnnnnnnnnnnnnnnn</td>
+                                            <td class="sdt">0987526123</td>
+                                            <td class="diachi">jhjhhjhjhjhjhj</td>
+                                            <td class="quyen">nv</td>
+                                            <td class="trangthai">khd</td>
+                                            <td style="text-align: center;">
+                                                <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                <i class="fas fa-trash-alt" title="Xóa"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+                </div>
+
+                <!--7 --->
+                <div class="tab-pane fade w-100" id="HoaDonNhap" role="tabpanel"  tabindex="0">              
+                    <div class="container-fluid">
+                        <div class="row">                          
+                            <div class="List-HDN col-12 mt-3">
+                                <div class="title">
+                                    <i class="fas fas fa-boxes"></i> Danh sách hóa đơn
+                                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_HDN">
+                                        <i class="far fa-add"></i>
+                                        Nhập thông tin hóa đơn 
+                                    </button> 
+                                    <hr>
+                                </div>
+
+                                <div class="modal fade" id="Modal_HDN" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhà cung cấp</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">                        
+                                                    <div class="Hdn-Infor col-12">
+                                                        <form action="#">
+                                                            <div class="mb-2">
+                                                                <label>Mã Hóa Đơn :</label>
+                                                                <input class="form-control" type="text" id="mancc" placeholder="Nhập mã khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label> Nhân Viên:</label>
+                                                                <select class="form-select" name="nv" id="nv">
+                                                                    <option value="Nhanvien1">Nhân viên 1 </option>
+                                                                    <option value="Nhanvien2">Nhân viên 2</option>
+                                                                </select>
+                                                            </div>
+                                                    
+                                                            <div class="mb-2">
+                                                                <label>Nhà Cung Cấp:</label>
+                                                                <select class="form-select" name="nv" id="nv">
+                                                                    <option value="Ncc1">NCC 1 </option>
+                                                                    <option value="Ncc2">NCCCC 2</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tổng sản phẩm:</label>
+                                                                <input class="form-control" type="text" min="0" id="tsp" placeholder="0" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tổng tiền:</label>
+                                                                <input class="form-control" type="number" min="0" id="tt" placeholder="0" required>
+                                                            </div>
+                                                            <div class="mb-2 d-flex">
+                                                                <label class=" me-2">Ghi chú:</label>
+                                                                <textarea style="width:400px;"> </textarea>
+                                                            </div>
+                                                            <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin nhân viên</button>
+                                                            
+                                                            <hr>
+                                                        </form>               
+                                                    </div>
+                                                </div>                
+                                            </div>     
+                                        </div>
+                                      </div>   
+                                    </div>
+                                </div>
+    
+                                <div class="find-list">
+                                
+                                    <div class="d-flex justify-content-between">
+                                        <input class="form-control" type="text" id="search-product-type" style="width: 600px;"
+                                            placeholder="Nhập mã...">
+                                        
+                                        
+                                        <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                    </div>
+    
+                                    <table class="table table-hover table-bordered mt-3">
+                                        <thead>
+                                            <tr>
+                                               
+                                                <th>Mã hóa đơn</th>
+                                                <th>Nhân viên</th>
+                                                <th>Nhà cung cấp</th>
+                                                <th>Tổng sản phẩm</th>
+                                                <th>Tổng tiền</th>
+                                                <th>Ngày</th>                                                                                
+                                                <th>Thao Tác</th>
+                                             
+                                            </tr>
+                                        </thead>
+                                
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" value=""></td>
+                                                <td class="idhd">1</td>
+                                                <td class="name-nv">Nguyen thi a</td>                 
+                                                <td class="ncc">nnnnnnnnnnnnnnnn</td>
+                                                <td class="tsp">0</td>
+                                                <td class="tt">0</td>
+                                                <td class="date"></td>
+
+                                                <td style="text-align: center;">
+                                                    <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                 </div>
+
+                <!--8--->
+                <div class="tab-pane fade w-100" id="HoaDonBan" role="tabpanel"  tabindex="0">              
+                    <div class="container-fluid">
+                        <div class="row">
+                           
+    
+                            <div class="List-Hdb col-12 mt-3">
+                                <div class="title">
+                                    <i class="fas fas fa-boxes"></i> Danh sách hóa đơn
+                                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_HDB">
+                                        <i class="far fa-add"></i>
+                                        Nhập thông tin hóa đơn 
+                                    </button> 
+                                    <hr>
+                                </div>
+    
+                                <div class="modal fade" id="Modal_HDB" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhà cung cấp</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">                        
+                                                    <div class="Hdb-Infor col-12 ">
+                                                        <form>
+                                                            <div class="mb-2">
+                                                                <label>Mã Hóa Đơn :</label>
+                                                                <input class="form-control" type="text" id="mancc" placeholder="Nhập mã khách hàng" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label> Khách Hàng:</label>
+                                                                <select class="form-select" name="nv" id="nv">
+                                                                    <option value="Nhanvien1">Nhân viên 1 </option>
+                                                                    <option value="Nhanvien2">Nhân viên 2</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Số Điện Thoại:</label>
+                                                                <input class="form-control" type="tel" min="0" id="sdtkh" placeholder="Nhập số điện thoại..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Email:</label>
+                                                                <input class="form-control" type="email" id="emailkh" placeholder="Nhập email..." required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Địa chỉ:</label>
+                                                                <input class="form-control" type="text" id="diachikh" placeholder="Nhập địa chỉ..." required>
+                                                            </div>
+                                                    
+                                                            <div class="mb-2">
+                                                                <label>Tổng sản phẩm:</label>
+                                                                <input class="form-control" type="text" min="0" id="tsp" placeholder="0" required>
+                                                            </div>
+                                                            <div class="mb-2">
+                                                                <label>Tổng tiền:</label>
+                                                                <input class="form-control" type="number" min="0" id="tt" placeholder="0" required>
+                                                            </div>
+                                                            <div class="mb-2 d-flex">
+                                                                <label class=" me-2">Ghi chú:</label>
+                                                                <textarea style="width:400px;"> </textarea>
+                                                            </div>
+                                                            <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+                                                            <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin hóa đơn</button>
+                                                            
+                                                            <hr>
+                                                        </form>
+                                                    </div>
+                                                </div>                
+                                            </div>     
+                                        </div>
+                                      </div>   
+                                    </div>
+                                </div>
+
+                                <div class="find-list">
+                                    <div class="d-flex justify-content-between">
+                                        <input class="form-control" type="text" id="search-product-type" style="width: 600px;"
+                                            placeholder="Nhập mã...">
+                                        
+                                        
+                                        <button class="btn btn-primary  float-end"><i class="fas fas fa-search"></i>Tìm kiếm</button>
+                                    </div>
+    
+                                    <table class="table table-hover table-bordered mt-3">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th>Mã hóa đơn</th>
+                                                <th>Khách hàng</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Email</th>
+                                                <th>Địa chỉ</th>
+                                                <th>Tổng sản phẩm</th>
+                                                <th>Tổng tiền</th>
+                                                <th>Ngày</th>                                                                                
+                                                <th>Thao Tác</th>
+                                             
+                                            </tr>
+                                        </thead>
+                                
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" value=""></td>
+                                                <td >1</td>
+                                                <td >Nguyen thi a</td>                 
+                                                <td >nnnnnnnnnnnnnnnn</td>
+                                                <td >093243425</td>
+                                                <td >gsga@ffd</td>
+                                                <td >ccccc</td>
+                                                <td >0</td>
+                                                <td >0</td>
+                                                <td></td>
+
+                                                <td style="text-align: center;">
+                                                    <i class="fas fa-edit" title="Sửa" onclick=""></i>
+                                                    <i class="fas fa-trash-alt" title="Xóa"></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </section>      
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            getnametk();
+            loadTypeProducts();
+            loadProducts();
+            loadOptionLSP();
+            loadOptionLNCC();
+            LoadNcc();
+        });
+        //kiem tra neu user=" " || null --> thoat
+        var user = JSON.parse(localStorage.getItem('InforDN'));
+        if (!user) {
+            window.location.href = "../admin/login.html";
+        }
+       
+        function previewImage() {
+            const inputs = document.getElementsByClassName('imginput');
+            const images = document.getElementsByClassName('viewimg');
+
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].files && inputs[i].files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                    images[i].src = e.target.result;
+                };
+
+                reader.readAsDataURL(inputs[i].files[0]);
+                }   
+            }
+        }         
+    </script>
+</body>
+
+</html>

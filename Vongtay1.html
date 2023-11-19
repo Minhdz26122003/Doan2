@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta charset="UTF-8">
+    <meta name="Vongtay1" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="css/Dc1.css" type="text/css">
+    <link rel="stylesheet" href="css/stylechung.css" type="text/css">
+    <script src="Js/jquery-3.6.0.min.js" defer ></script>  
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="Js/Cart.js" defer ></script>
+    <script src="js/Daychuyen1.js" defer></script>
+    <title>Vòng tay 1</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+
+    <section class="Infor-proc">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-7 col-12 img-pro">
+                    <img src="image/Lock/tiffany-lock-ros-edition-73965292_1062354_ED_M.webp" id="main-img" alt="" style="max-width: 80%;">
+                    <p class="img-change mt-2">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965292_1062351_AV_1_M.webp" width="95">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965292_1062352_AV_2_M.webp" width="95">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965292_1062353_AV_3_M.webp" width="95">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965292_1062356_AV_4_M.webp" width="95">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965292_1062355_AV_5_M.webp" width="95">
+                        <img src="image/VT1/tiffany-lock-ros-edition-73965330_1062357_SV_1.webp" width="95">
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-5 col-12">
+
+                    <div class="link">
+                        <a href="Trangchu.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                            Trang chủ
+                        </a>
+                        <span>
+                            <a href="BstLock.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                                / Bộ sưu tập Tiffany Lock ROSÉ 
+                            </a>
+                        </span>
+                        <span>
+                            <a href="Vongtay1.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                                / Vòng tay cỡ lớn với đá sapphire màu hồng dát vàng hồng.
+                            </a>
+                        </span>
+                    
+                    </div> 
+
+                    <div class="brands mt-3">
+                        <a href="#" class="fs-5 link-dark link-underline-dark link-underline-opacity-25">Phiên bản Tiffany Lock ROSÉ</a>
+                    </div>
+
+                    <div class="proc">
+                        <div class="infor mt-3">
+                            <h2 class="">Vòng tay cỡ lớn với đá sapphire màu hồng</h2>
+                            <h5 class="fw-light fs-5">Vàng hồng với ngọc bích màu hồng</h5>
+                        </div>
+                        <div class="nc"></div>
+                        <div class="new-price fs-3 fw-bold">18.000.000<span> VND</span></div>
+                    
+                        <button onclick="addToCart({id:'18',image:'image/Lock/tiffany-lock-ros-edition-73965292_1062354_ED_M.webp', price:18000000, name:'Vòng tay cỡ lớn với đá sapphire màu hồng dát vàng hồng '})"
+                        class="btn btn-info">Thêm Vào Giỏ</button>
+                    </div>
+
+                    <div class="chitiet mt-5">
+                        <header class="fw-bold">Mô tả và chi tiết sản phẩm</header>
+                        <p> Phiên bản Tiffany Lock ROSÉ bày tỏ lòng tôn kính với tên ROSÉ bằng cách lấy những viên ngọc bích màu hồng làm trung tâm. 
+                            Màu hồng là một trong những màu sapphire hiếm nhất trong tự nhiên, tượng trưng cho sức mạnh vô hạn của tình yêu và thể hiện tinh thần bí ẩn của dòng Lock cũng như bản chất nghệ thuật của siêu sao toàn cầu. 
+                            Những viên đá quý rực rỡ được đính thủ công trong chiếc vòng tay bằng vàng hồng 18K. 
+                            Để có được sự quyến rũ tối đa, hãy kết hợp nó với các thiết kế khác từ bộ sưu tập Tiffany Lock.
+                        </p>                            
+                        <header class="fw-bold">Cách đeo vòng tay Tiffany Lock:</header>    
+                        <ol class="mb-2">
+                            <li>Khi mở, tìm rãnh khóa, vị trí sẽ được thể hiện bằng một khe hở nhỏ.</li>
+                            <li>Đặt tay lên hai bên rãnh khóa và nhẹ nhàng kéo ra ngoài.</li>
+                            <li>Khi đeo vòng tay, hãy đặt rãnh khóa ở bên trong cổ tay của bạn. Dùng cổ tay tác dụng lực và cẩn thận kéo ra khỏi rãnh khóa.</li>
+                            <li>Khi buộc chặt, vặn hai đầu lại với nhau và thả ra để buộc chặt.</li>                           
+                        </ol>
+
+                        <ul class="mb-2">
+                            <li>Vàng hồng 18K đính đá sapphire hồng</li>
+                            <li>Kích thước trung bình</li>
+                            <li>Thích hợp cho cổ tay có chu vi cổ tay từ 6,25 inch trở xuống</li>
+                            <li>Tổng trọng lượng 1,61 carat, Đóng mở ẩn</li>
+                            <li>Vui lòng xem hướng dẫn định cỡ bên dưới để biết kích thước vòng tay Tiffany Lock được đề xuất cho bạn</li>
+                            <li>Vui lòng xem video bên dưới để biết hướng dẫn cách mở và buộc chặt vòng tay Tiffany Lock của bạn</li>
+                            <li>Mã sản phẩm:73965322</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="videohow">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="video col-12">
+                    <video src="image/VT1/LOCK_Instruction_HalfPave_16x9.mp4"  class="object-fit-fill border rounded " type="video/mp4" style="max-width: 100%; height: auto;" autoplay loop muted height="100vh">
+                    </video>
+                    <div class="video-text">
+                        <h3 >Hướng dẫn đeo vòng tay Tiffany Lock</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion">
+        <div class="Dichvu container-fluid mt-5 bg-info-subtle">
+            <div class="row p-5">
+                <div class="col-md-6 col-sm-5 col-12">
+                    <header class="fw-bold fs-4">Trải nghiệm Tiffany</header>
+                    <p> Hãy chọn Tiffany & Co. và trở thành thành viên quan trọng của gia đình Tiffany ngay lập tức. 
+                        Kể từ năm 1837, chúng tôi tự hào về việc cung cấp dịch vụ chất lượng, một truyền thống vẫn tiếp tục cho đến ngày nay.
+                    </p>
+                </div>
+
+                <div class="col-md-6 col-sm-5 col-12">
+                    <div class="accor ">
+                        <div class="accordion accordion-flush" id="accordioParent1">
+                            <div class="accordion-item ">
+                                <h5 class="accordion-header boder border-bottom border-dark">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <span class="fw-semibold">Trân trọng dịch vụ của bạn</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionParent1">
+                            <div class="accordion-body">                        
+                                Trải nghiệm dịch vụ được cá nhân hóa được thiết kế riêng cho bạn bởi các chuyên gia tư vấn khách hàng của Tiffany & Co. để đáp ứng mọi nhu cầu của bạn. 
+                                Từ việc mua nhẫn đính hôn hoặc quà tặng cho đến sắp xếp dịch vụ tư vấn trực tuyến hoặc tại cửa hàng, chúng tôi luôn sẵn sàng phục vụ bạn.
+                                liên hệ chúng tôi
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="accor">
+                        <div class="accordion-flush accordion" id="accordioParent2">
+                            <div class="accordion-item">
+                                <h5 class="accordion-header boder border-bottom border-dark ">
+                                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-controls="flush-collapseTwo" aria-expanded="false">
+                                        <span class="fw-semibold">Hộp xanh</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="accordion-collapse collapse" id="flush-collapseTwo" data-bs-parent="#accordionParent2">
+                            <div class="accordion-body">
+                                Tất cả sản phẩm mua tại Tiffany & Co. đều được đóng gói đẹp mắt trong Hộp Tiffany Blue. 
+                                Loại bao bì quen thuộc này có từ năm 1886, nhưng ngày nay tất cả các hộp và túi giấy màu xanh đều được làm từ giấy có nguồn gốc bền vững và vật liệu có thể tái chế.
+
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="accor">
+                        <div class="accordion accordion-flush" id="accordioParent3">        
+                            <div class="accordion-item">
+                                <h5 class="accordion-header boder border-bottom border-dark ">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-controls="flush-collapseThree" aria-expanded="false">
+                                        <span class="fw-semibold">Mua hàng có trách nhiệm</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="accordion-collapse collapse" id="flush-collapseThree" data-bs-parent="#accordionParent3">
+                            <div class="accordion-body">
+                                Trong hơn hai thập kỷ, chúng tôi đã làm việc không mệt mỏi để tìm nguồn nguyên liệu quý giá mà chúng tôi sử dụng trong đồ trang sức của mình một cách có trách nhiệm.
+
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="accor">
+                        <div class="accordion accordion-flush" id="accordioParent4">
+                            <div class="accordion-item">
+                                <h5 class="accordion-header boder border-bottom border-dark ">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" 
+                                        aria-controls="flush-collapseFour" aria-expanded="false">
+                                        <span class="fw-semibold">Đo kích thước</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="accordion-collapse collapse" id="flush-collapseFour" data-bs-parent="accordioParent4">
+                            <div class="accordion-body">
+                                Sử dụng hướng dẫn chọn kích thước của Tiffany & Co. để đo kích thước chính xác cho vòng tay, dây chuyền và nhẫn.
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="accor">
+                        <div class="accordion accordion-flush" id="accordioParent5">        
+                            <div class="accordion-item">
+                                <h5 class="accordion-header boder border-bottom border-dark ">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-controls="flush-collapseFive" aria-expanded="false">
+                                        <span class="fw-semibold">Ghé thăm cửa hàng</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="accordion-collapse collapse" id="flush-collapseFive" data-bs-parent="#accordionParent5">
+                            <div class="accordion-body">
+                                Ghé thăm cửa hàng Tiffany & Co. để khám phá những thiết kế mới nhất, bộ sưu tập cổ điển, v.v.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container-fluid mt-5 ">
+            <div class="row">
+                <div class="banner-img col-12">
+                    <img src="image/VT1/2023-LOCK2.webp" alt="" style="max-width: 100%; height: auto;">
+                    <div class="banner-text">
+                        <header class="fw-semibold fs-4">Tiffany Lock</header>
+                        <p>Ổ khóa đã trở thành một thương hiệu cổ điển nổi tiếng từ những năm 1880. 
+                            Giờ đây, Khóa Tiffany đã được tái diễn như một biểu tượng của tình yêu vĩnh cửu với sức quyến rũ lạ thường. 
+                            Để tôn vinh sự kết nối bền chặt của chúng ta, bộ sưu tập này được thiết kế để mọi người đều có thể đeo. 
+                            Vòng tay, mặt dây chuyền, hoa tai và nhẫn được tinh giản và tô điểm bằng những viên kim cương huyền thoại của Tiffany.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">    
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form >
+                    <input type="email" class="form-control" placeholder="Email" required>
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+@media (max-width:840px) {
+    .img2 img {
+        display: none;
+    }
+}    
+
+.new-product{
+    margin-top: 50px;
+} 
+.spm-img img{
+    max-width: 100%;
+    height: auto;
+    
+}  
+
+.spm-img{
+    position: relative;
+}
+
+.spm-img .sale{
+    position: absolute;
+    border: rgb(220, 220, 220) 0.7px solid;
+    background-color: rgb(230, 17, 17);
+    border-radius: 20px;
+    padding:6px ;
+    left: 10%;
+    top: 15%;
+    transform: translate(-40%,-80%);
+}
+.spm-img .sale h5{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.spm-bt{
+    display: none;
+    position:absolute;
+    
+    border: #3aafcf 0,5px solid;
+    left: 45%;
+    top: 80%;
+    transform: translate(-40%,-80%);
+}
+.spm-img button:hover{
+    background-color:rgb(212, 89, 89);
+}
+.spm-img:hover .spm-bt{
+    display: block;
+}
+.list-group{
+    margin-top: 30px;
+    
+}  
+.pro-list img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+.pro-list img:hover{
+    transition: ease-in-out;
+    transform: scale(1.2);
+    border-radius:20px;
+}
+.pro-list h5{
+    margin-top: 5px;
+    font-size: 18px;
+}
+.story-bd{
+    border: #dddada 0.5px solid;  
+}
+
+.banner .col-12{
+    margin-top: 10px;
+}
+/* @keyframes slideLeft{
+    form{
+        transform: translate(-300px);
+    }
+    to{
+        transform: translate(0px);
+    }
+}
+.banner .content-banner{
+    animation: slideLeft 1s ease-in 1s normal both;
+    transform: translateX(-150px);
+}
+.banner .img1{
+    animation: slideLeft 1s ease-in 1s normal both;
+    transform: translateX(-150px);
+}
+.banner .img2{
+    animation: slideLeft 1s ease-in 1s normal both;
+    transform: translateX(-150px);
+} */
+.bn1-img {
+    position: relative;
+}
+  
+  .bn1-text {
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    transform: translate(-55%, -70%);
+   /*transform: translate(); dịch .bn1-text đi lùi 60% về phía trái và 80% lên trên*/
+}
+@media (max-width:830px) {
+    .bn1-text {
+        display: none;
+    }
+}    
+.bn2-img {
+    position: relative;
+}
+  .bn2-text {
+    position: absolute;
+    top: 35%;
+    left:35%;
+    transform: translate(-50% ,-30%);
+}
+.bn2-text p{
+    padding-right: 350px;
+}
+@media (max-width:855px) {
+    .bn2-text {
+        display: none;
+    }
+} 
+.ex-list{
+    text-align: center;
+}
+.ex-text h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+.ex-text p{
+    font-size: 13px;
+}
+

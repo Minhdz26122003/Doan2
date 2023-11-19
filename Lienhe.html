@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta charset="UTF-8">
+    <meta name="Dang Nhap" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>  
+    <link rel="stylesheet" href="css/stylechung.css">
+    <title>Liên Hệ</title>
+    <style>    
+        .how h5{
+            font-size: 16px;
+        }
+        .accor h5{
+            margin-top: 30px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>  
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+
+    <section class="banner mb-4">   
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-6 col-10 ">
+                <img class="img-fluid" src="image/Lienhe/2022_AS-CUSTOMERSERVICE-LP-FWMH-1-NOR-Desktop.jpg" width="100%">
+            </div>
+            <div class="text col-md-6 col-sm-6 col-11 my-5">
+                <h3 class="fw-lighter mx-5">Tiffany sẵn sàng phục vụ bạn</h3>
+                <p class="my-5 mx-5"> Đối với Cố vấn tài khoản Tiffany của chúng tôi,
+                    mọi thắc mắc và yêu cầu đều quan trọng.
+                    Từ việc lựa chọn nhẫn đính hôn kim cương,
+                    trang sức tinh xảo và quà tặng chọn lọc cho đến cung cấp dịch vụ đặt lịch hẹn trực tuyến hoặc tại cửa
+                    hàng,
+                    chúng tôi luôn tận tâm cung cấp cho bạn dịch vụ chất lượng cao.
+                </p>
+            </div>
+        </div>  
+
+    </section>
+
+    <section class="infor-1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h3 class="mb-5 ms-5">Liên hệ với chúng tôi</h3>
+                <div class="col-1 col-md-1 col-sm-1">
+                    <i class="fa-solid fa-phone-volume fa-2xl"></i><br>
+                    <i class="fa-regular fa-envelope fa-2xl mt-5"></i>
+                </div>
+                <div class="col-md-4 col-sm-4 col-10">
+                    <h5> Gọi 4009213299</h5> <br>
+                    <h5> Địa chỉ email</h5>
+                </div>
+                <div class="col-md-4 col-sm-4 col-10 mt-2" >
+                   <h5>Thời gian hoạt động:</h5>
+                   <h5>Thứ Hai đến Chủ Nhật: 8 giờ sáng đến 10 giờ tối</h5>
+                </div>
+            </div>
+
+            <div class="row justify-content-center my-5">
+                <h3 class="ms-5">Làm thế nào chúng tôi có thể giúp bạn?</h3>
+                <div class="how col-md-2 col-sm-5 col-5 text-center">
+                    <div>
+                        <img src="image/Lienhe/2022_AS-CUSTOMERSERVICE-LP-QL-5.jpg" width="200px" alt="thamkhao">
+                    </div>
+                    <h5>Tham khảo ý kiến chuyên gia kim cương</h5>
+                </div>
+                <div class="how col-md-2 col-sm-5 col-5 text-center">
+                    <div>
+                        <img src="image/Lienhe/2022-as-customerservice-lp-ql-2.jpg" width="200px" alt="suachua">
+                    </div>
+                    <h5>Yêu cầu sửa chữa</h5>
+                </div>
+                <div class="how col-md-2 col-sm-5 col-5 text-center">
+                    <div>
+                        <img src="image/Lienhe/2022-as-customerservice-lp-ql-3.jpg" width="200px" alt="kichco">
+                    </div>
+                    <h5>Tìm kích thước của bạn</h5>
+                </div>
+                <div class="how col-md-2 col-sm-5 col-5 text-center">
+                    <div>
+                        <img src="image/Lienhe/2022_AS-CUSTOMERSERVICE-LP-QL-6.jpg" width="200px" alt="tuychinh">
+                    </div>
+                    <h5>Tuỳ chỉnh cá nhân</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="infor-2">
+        <div class="container"> 
+            <div class="row justify-content-center">
+                
+                <div class="col-md-6 col-sm-10 col-10 text-center">
+                    <img src="image/Lienhe/2022_AS-CUSTOMERSERVICE-LP-50-50-1-Desktop.jpg" width="500px" alt="dichvu">
+                    <h3 class="mt-3">Tiffany làm dịch vụ sau bán hàng</h3>
+                    <p>Chúng tôi cung cấp dịch vụ vệ sinh, sửa chữa và sửa đổi phù hợp trọn đời cho các sản phẩm Tiffany của bạn.</p>
+                </div>
+                
+                <div class="col-md-6 col-sm-10 col-10 text-center">
+                    <img src="image/Lienhe/2022_AS-CUSTOMERSERVICE-LP-50-50-2-Desktop.jpg" width="500px" alt="Baohanh">
+                    <h3 class="mt-3">Bảo hành sản phẩm Tiffany</h3>
+                    <p>Khám phá cách chăm sóc các chất liệu độc đáo được sử dụng trong các sản phẩm của Tiffany, chẳng hạn như kim loại và da.</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion">
+        <div class="question container mt-5">
+            <h4 class="boder border-bottom border-dark">Vấn đề thường gặp ?</h4>
+            <div class="accor">
+                <div class="accordion accordion-flush" id="accordioParent1">
+                    <div class="accordion-item">
+                        <h5 class="accordion-header boder border-bottom border-dark">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Làm cách nào để bảo quản đồ trang sức Tiffany của tôi?
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionParent1">
+                    <div class="accordion-body">                        
+                        Kể từ năm 1837, Tiffany & Co. đã duy trì các tiêu chuẩn khắt khe về thiết kế, vật liệu và tay nghề thủ công.
+                        Đây chính là lý do vì sao trang sức Tiffany được cả thế giới yêu thích và trở thành kiệt tác được truyền từ
+                        thế
+                        hệ này sang thế hệ khác.
+                        Chăm sóc cơ bản đơn giản có thể giúp bảo vệ đồ trang sức Tiffany của bạn, giữ cho nó trông và sáng bóng như
+                        mới
+                        trong nhiều năm tới.<br><br>
+                        Để đồ trang sức được truyền từ thế hệ này sang thế hệ khác, chúng phải được chăm sóc đúng cách.
+                        Bụi, chất ô nhiễm và sự mài mòn hàng ngày có thể che khuất độ sáng chói của đá quý và khiến bề mặt của đồ
+                        trang
+                        sức bằng vàng,
+                        bạch kim và bạc mất đi độ bóng ban đầu. Những chiếc ngạnh hoặc móc cài cũ có thể khiến một số viên đá quý
+                        hoặc
+                        thậm chí cả phần chính của đồ trang sức rơi ra và bị thất lạc.<br><br>
+                        Bạn nên làm sạch đồ trang sức của mình một cách chuyên nghiệp hàng năm.
+                        Chúng tôi khuyên bạn nên mang đồ trang sức Tiffany của mình trở lại cửa hàng Tiffany để được chăm sóc chuyên
+                        nghiệp.
+                        Các thợ thủ công của chúng tôi có nhiều kinh nghiệm trong tất cả các khía cạnh chăm sóc đồ trang sức, bao
+                        gồm
+                        làm sạch đá, thay thế và lắp lại hạt, sửa móc cài hoặc khuyên tai, v.v.<br><br>
+            
+                        <span class="fw-bold">Trang sức bạc Tiffany</span><br>
+                        Tiffany chỉ sử dụng bạc sterling, một loại kim loại đẹp có độ sáng bóng. Bạc sterling là kim loại quý cần
+                        được
+                        chăm sóc và làm sạch thường xuyên.
+                        Nếu được chăm sóc đúng cách, đồ trang sức bạc của bạn sẽ trông như mới trong một thời gian dài.<br><br>
+            
+                        <span class="fw-bold"> Những nguyên tắc đầu tiên của việc chăm sóc bạc sterling</span><br>
+                        Bạc sterling dễ bị xỉn màu, đặc biệt khi tiếp xúc với không khí muối và các vật dụng có chứa lưu huỳnh khác,
+                        chẳng hạn như dây cao su hoặc một số loại giấy. Tuy nhiên, đồ trang sức bằng bạc được đeo thường xuyên
+                        thường ít
+                        cần bảo trì thường xuyên hơn. Vì vậy, Tiffany khuyên bạn nên đeo trang sức bạc hàng ngày.<br><br>
+            
+                        <span class="fw-bold"> Chăm sóc bạc hàng ngày</span><br>
+                        Bóp một lượng nhỏ Nước rửa trang sức bạc Tiffany lên một miếng vải mềm và nhẹ nhàng lau bề mặt trang sức bạc
+                        của
+                        bạn nhiều lần.
+                        Rửa kỹ bằng nước ấm và lau khô cẩn thận bằng vải mềm. Điều này sẽ loại bỏ rỉ sét và xỉn màu trên bề mặt,
+                        giúp đồ
+                        trang sức bạc của bạn sáng như mới.
+                        Không bao giờ sử dụng các sản phẩm có gốc clo và thuốc tẩy vì chúng có thể làm tăng tốc độ rỉ sét của đồ
+                        trang
+                        sức bằng bạc.<br><br>
+            
+                        <span class="fw-bold"> Chú ý</span><br>
+                        Một số đồ trang sức bằng bạc sẽ sử dụng quy trình "đánh bóng oxy hóa",
+                        nghĩa là cố ý oxy hóa một số khoảng trống hoa văn trên trang sức bạc để làm cho nó có màu đen,
+                        làm cho hiệu ứng tương phản chi tiết rõ ràng và rõ ràng hơn. Làm sạch và đánh bóng quá mức sẽ xóa
+                        nó.<br><br>
+            
+                        <span class="fw-bold">Bảo quản trang sức bạc</span><br>
+                        Sau khi làm sạch và đánh bóng, trang sức bạc phải được giữ khô và bảo quản đúng cách.
+                        Túi nhung Tiffany Blue® Tiffany Blue bảo vệ chúng khỏi hao mòn và duy trì độ bóng của chúng.
+                        Túi làm bằng vải chống gỉ Thái Bình Dương còn có đặc tính chống gỉ cực tốt.<br>
+                        Chúng tôi cung cấp dịch vụ đánh bóng đồ trang sức và bộ đồ ăn bằng bạc Tiffany.
+                        Nếu cần, bạn có thể liên hệ với cửa hàng Tiffany gần nhất hoặc gọi dịch vụ khách hàng theo số 400 921 3299.
+            
+            
+                    </div>
+                </div>
+            </div>
+
+            <div class="accor">
+                <div class="accordion-flush accordion" id="accordioParent2">
+                    <div class="accordion-item">
+                        <h5 class="accordion-header boder border-bottom border-dark ">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-controls="flush-collapseTwo" aria-expanded="false">
+                                Làm thế nào để đo kích thước vòng?
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div class="accordion-collapse collapse" id="flush-collapseTwo" data-bs-parent="#accordionParent2">
+                    <div class="accordion-body">
+                        Tiffany sử dụng kích cỡ nhẫn tiêu chuẩn của Mỹ. Vui lòng xem biểu đồ kích thước Tiffany hoặc sử dụng đây .Thước đo trong hướng dẫn kích thước.
+                    </div>
+                </div>
+            </div>
+           
+            <div class="accor">
+                <div class="accordion accordion-flush" id="accordioParent3">        
+                    <div class="accordion-item">
+                        <h5 class="accordion-header boder border-bottom border-dark ">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-controls="flush-collapseThree" aria-expanded="false">
+                                Làm thế nào để trả lại hoặc trao đổi một mặt hàng?
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div class="accordion-collapse collapse" id="flush-collapseThree" data-bs-parent="#accordionParent3">
+                    <div class="accordion-body">
+                        Trừ khi tác phẩm bạn mua trực tuyến là tác phẩm được đặt làm riêng hoặc trong phần mô tả tác phẩm có quy định khác rằng các điều kiện hoàn trả sau đây không áp dụng, bạn có thể trả lại tác phẩm mà không cần lý do trong vòng bảy ngày sau khi xác nhận đã nhận tác phẩm, miễn là bạn xác nhận đã nhận được tác phẩm. Tác phẩm phải được trả lại trong vòng bảy ngày tiếp theo trong tình trạng hoàn toàn mới, có thể bán được, cùng với tất cả bao bì và tài liệu gốc của nó (bao gồm cả chứng từ bán hàng do công ty chúng tôi phát hành). Không ảnh hưởng đến các điều kiện hoàn trả nêu trên, đối với mỹ phẩm (bao gồm nhưng không giới hạn ở nước hoa, sản phẩm chăm sóc da, v.v.), một khi đã mở bao bì kín dùng một lần của tác phẩm, bạn không thể trả lại mà không có lý do. <br><br>
+
+                        Nếu tác phẩm bạn mua trực tuyến không khớp với tác phẩm được liệt kê trong đơn đặt hàng hoặc nếu tác phẩm có bất kỳ vấn đề nào về chất lượng, vui lòng liên hệ ngay với trung tâm chăm sóc khách hàng của chúng tôi để được trả lại, sửa chữa hoặc thay thế. Công ty không chịu bất kỳ trách nhiệm nào đối với sự hư hỏng của tác phẩm hoặc mất giá trị do các lý do khác do tác phẩm được đeo hoặc bảo quản không đúng cách hoặc do bạn hoặc bên thứ ba sửa đổi hoặc thay đổi tác phẩm. Đây không phải là vấn đề về chất lượng công việc và công ty không chịu bất kỳ trách nhiệm nào. <br><br>
+                        
+                        Bạn có thể liên hệ với Trung tâm chăm sóc khách hàng của Công ty theo số 400 921 3299 để được hướng dẫn trả lại (bao gồm nhưng không giới hạn các yêu cầu về vận chuyển và đóng gói). Vui lòng gửi tác phẩm đến địa chỉ trả lại do công ty chúng tôi chỉ định. Các cửa hàng ngoại tuyến của công ty chúng tôi không chấp nhận trả lại tác phẩm đã mua qua các kênh trực tuyến. Bạn sẽ được yêu cầu cung cấp các thông tin sau: (i) Mô tả tác phẩm bạn muốn trả lại và lý do trả lại (không có lý do để trả lại tác phẩm trong vòng bảy ngày hoặc bất kỳ vấn đề chất lượng nào với tác phẩm); (ii) Số đơn đặt hàng (iii) Thông tin liên hệ và địa chỉ gửi thông tin nhận thông tin của bạn. Bạn cũng có thể được yêu cầu cung cấp ảnh chụp tác phẩm sẽ được trả lại và mọi tài liệu kiểm tra chất lượng của tác phẩm để công ty có thể đánh giá sơ bộ về tình trạng của tác phẩm.<br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accor">
+                <div class="accordion accordion-flush" id="accordioParent4">
+                    <div class="accordion-item">
+                        <h5 class="accordion-header boder border-bottom border-dark ">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" 
+                                aria-controls="flush-collapseFour" aria-expanded="false">
+                                Tiffany có cung cấp dịch vụ đo kích cỡ không?
+                            </button>
+                        </h5>
+                    </div>
+                </div>
+                <div class="accordion-collapse collapse" id="flush-collapseFour" data-bs-parent="accordioParent4">
+                    <div class="accordion-body">
+                        Tiffany & Co. cung cấp dịch vụ thay đổi kích thước cho một số mặt hàng chọn lọc. Để biết thêm thông tin, vui lòng liên hệ bộ phận Chăm sóc khách hàng theo số 400 921 3299.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="text-center my-5 fs-6">           
+            <a class="link-dark link-underline-dark link-underline-opacity-10 link-underline-opacity-100-hover" href="#">Trang đầu </a><span class="fw-bold">/ Chăm sóc khách hàng</span>
+        </div>
+    </section>
+
+    <section class="footer" style="border-top:3px solid #81d8d0; ">
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form action="#">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>
+</body>

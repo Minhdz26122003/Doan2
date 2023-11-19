@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="Js/getsp.js" defer></script>
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="hienthi" onclick="loadProducts(4,20)">Load</button>
+    <form id="productList"></form> 
+    <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+    <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin hóa đơn</button>
+    <button class="btn btn-success" onclick="CapNhat()">Cập nhật thông tin</button>
+    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#Modal_HDB">
+        <i class="far fa-add"></i>
+        Nhập thông tin hóa đơn 
+    </button>
+    <!--  onclick="Getdata(${index})" -->
+
+      <!-- Modal -->
+    <div class="modal fade" id="Modal_HDB" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5"><i class="fas fas fa-boxes"></i> Nhập thông tin nhà cung cấp</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">                        
+                        <div class="Hdb-Infor col-12 ">
+                            <form>
+                                <div class="mb-2">
+                                    <label>Mã Hóa Đơn :</label>
+                                    <input class="form-control" type="text" id="mancc" placeholder="Nhập mã khách hàng" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label> Khách Hàng:</label>
+                                    <select class="form-select" name="nv" id="nv">
+                                        <option value="Nhanvien1">Nhân viên 1 </option>
+                                        <option value="Nhanvien2">Nhân viên 2</option>
+                                    </select>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Số Điện Thoại:</label>
+                                    <input class="form-control" type="tel" min="0" id="sdtkh" placeholder="Nhập số điện thoại..." required>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Email:</label>
+                                    <input class="form-control" type="email" id="emailkh" placeholder="Nhập email..." required>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Địa chỉ:</label>
+                                    <input class="form-control" type="text" id="diachikh" placeholder="Nhập địa chỉ..." required>
+                                </div>
+                        
+                                <div class="mb-2">
+                                    <label>Tổng sản phẩm:</label>
+                                    <input class="form-control" type="text" min="0" id="tsp" placeholder="0" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label>Tổng tiền:</label>
+                                    <input class="form-control" type="number" min="0" id="tt" placeholder="0" required>
+                                </div>
+                                <div class="mb-2 d-flex">
+                                    <label class=" me-2">Ghi chú:</label>
+                                    <textarea style="width:400px;"> </textarea>
+                                </div>
+                                <button class="btn btn-success" onclick="NhapMoi()">Nhập mới</button>
+                                <button type="submit" class="btn btn-primary" onclick="ThemLoaiSanPham()"> Nhập thông tin hóa đơn</button>
+                                <button class="btn btn-success" onclick="CapNhat()">Cập nhật thông tin</button>
+                                <hr>
+                            </form>
+                        </div>
+                    </div>                
+                </div>     
+            </div>
+          </div>   
+        </div>
+    </div>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal_SPsua" > 
+        <i class="fas fa-edit" title="Sửa"></i>                           
+    </button>
+
+   
+    <select class="form-select" name="loaisp" id="ncc">
+       
+    </select>
+    <select class="form-select" name="loaisp" id="loaisp">
+       
+    </select>
+</body>
+<script>
+
+
+fetch('../Json/Nhacungcap.json')
+  .then(response => response.json())
+  .then(data => {
+    // Kiểm tra xem data có phải là mảng không
+    const selectElement = document.getElementById('ncc');
+    if (Array.isArray(data.Nhacungcap)) {
+      // Loop through the data and create <option> elements
+      data.Nhacungcap.forEach(item => {
+        const optionElement = document.createElement('option');
+        optionElement.value = item.idncc;
+        optionElement.text = item.tenncc;
+        selectElement.appendChild(optionElement);
+      });
+    } else {
+      console.error('Dữ liệu từ tệp JSON không phải là mảng.');
+    }
+  })
+  .catch(error => console.error('Lỗi: ' + error));
+
+  fetch('../Json/loaisanpham.json')
+  .then(response => response.json())
+  .then(data => {
+    // Kiểm tra xem data có phải là mảng không
+    const selectElementlsp = document.getElementById('loaisp');
+
+    if (Array.isArray(data.Loaisanpham)) {
+      // Loop through the data and create <option> elements
+      data.Loaisanpham.forEach(item => {
+        const optionElement = document.createElement('option');
+        optionElement.value = item.idloai; // Sửa lại tên thuộc tính để lấy idloai
+        optionElement.text = item.tenloai;
+        selectElementlsp.appendChild(optionElement);
+      });
+    } else {
+      console.error('Dữ liệu từ tệp JSON không phải là mảng.');
+    }
+  })
+  .catch(error => console.error('Lỗi: ' + error));
+
+
+</script>
+</html>

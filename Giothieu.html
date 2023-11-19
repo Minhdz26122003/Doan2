@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta name="Gioi Thieu" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>    
+    <script src="Js/jquery-3.6.0.min.js" defer ></script>   
+    <script src="Js/Cart.js" defer ></script>
+    <link rel="stylesheet" href="css/stylechung.css">
+    <title>Giới Thiệu</title>
+    <style>
+        @media (max-width:768px) {
+            .Hide {
+                display: none;
+        }
+} 
+    </style>
+</head>
+<body>
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+
+    <section class="Mota-1 mb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold">Thế giới của Tiffany</h1>
+                    <p>Mỗi câu chuyện đáng nhớ đều có một khởi đầu tuyệt vời. Khám phá sự thành lập và lịch sử của Tiffany & Co. Được thành lập vào năm 1837, 
+                        Tiffany đã dần phát triển thành một thương hiệu xa xỉ dẫn đầu thế giới về phong cách huyền thoại sang trọng và thanh lịch với những món đồ trang sức lộng lẫy, sự đổi mới không ngừng và sự khéo léo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-1 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-12">
+                    <img src="image/Giới Thiệu/WOT-LP-FWMH1-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-md-4 col-12 px-3 align-self-center text-center">
+                    <h3 class="fw-bold">Kế thừa cổ điển</h3>
+                    <p>Khám phá những khoảnh khắc quan trọng nhất trong hơn 185 năm tồn tại của thương hiệu. Từ Viên kim cương Tiffany và nhiều loại đá quý quý hiếm khác cho đến sự xuất hiện của Sách xanh và Hộp quà màu xanh mang tính biểu tượng, 
+                        hãy tìm hiểu về Charles Lewis Tiffany, 
+                        người tạo ra huyền thoại Tiffany và khám phá những khoảnh khắc kỷ niệm quan trọng tượng trưng cho sự phát triển của Tiffany.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-2 mb-5">
+        <div class="container-fluid">
+            <div class="row">      
+                <div class="col-md-4 col-12 px-3 align-self-center text-center">
+                    <h3 class="fw-bold">“Vua kim cương”</h3>
+                    <p>Người sáng lập Charles Lewis Tiffany là người đầu tiên giới thiệu loại đá quý có trọng lượng lớn đến Hoa Kỳ, 
+                        khiến Tiffany được giới truyền thông mệnh danh là "Vua kim cương". Năm 1886, chiếc nhẫn đính hôn kim cương sáu cạnh Tiffany® Setting, 
+                        biểu tượng tinh túy của tình yêu đích thực, đã được ra mắt, làm mới danh tiếng của thương hiệu Tiffany.</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <img src="image/Giới Thiệu/WOT-LP-FWMH2_2_-Desktop.jfif.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="Hide col-md-4 align-self-center ">
+                    <img src="image/Giới Thiệu/wot-lp-fwmh2-desktop.jpg" alt="" style="max-width: 90%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-3 mb-5">
+        <div class="container-fluid">
+            <div class="row">      
+                <div class="col-md-8 col-12"  >
+                    <img src="image/Giới Thiệu/wot-lp-fwmh3-desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-md-4 col-12 px-3 align-self-center text-center">
+                    <h3 class="fw-bold">Hộp quà màu xanh Tiffany Hộp quà màu xanh Tiffany</h3>
+                    <p>Vào giữa thế kỷ 19, Chiếc hộp màu xanh Tiffany đã trở thành một món quà được thèm muốn và lưu truyền ngay khi nó được tung ra thị trường. 
+                        Hộp quà màu xanh Tiffany Hộp quà màu xanh Tiffany mang theo những giấc mơ đẹp và chứng kiến ​​những khoảnh khắc quan trọng trong cuộc đời khiến thót tim.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="Mota-2">
+        <div class="container">
+            <div class="row">  
+                <div class="col-md-12 col-12 px-3  text-center">
+                    <h3 class="fw-bold">Tinh thần khám phá đá quý được truyền lại từ lâu</h3>
+                    <p>Charles Lewis Tiffany và các nhà đá quý của ông đã đi đầu trong việc tìm kiếm các loại đá quý quý hiếm trên khắp thế giới. Sự khám phá đầy đam mê của họ đã giúp họ tìm thấy những viên đá quý quý hiếm có vẻ đẹp và màu sắc đặc biệt. 
+                        Niềm đam mê khám phá và trưng bày những viên đá quý tuyệt đẹp tiếp tục thúc đẩy Tiffany cho đến ngày nay. </p>
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-4 mb-5">
+        <div class="container-fluid">
+            <div class="row">    
+                <div class="Hide col-md-4 align-self-center ps-5">
+                    <img src="image/Giới Thiệu/WOT-LP-FWMH4-Desktop.jpg" alt="" style="max-width: 95%; height: auto;">
+                </div>
+                <div class="col-md-8 col-12"  >
+                    <img src="image/Giới Thiệu/wot-lp-fwmh4-2-desktop-jfif.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="designer">
+        <div class="container">
+            <div class="row text-center ">
+                <div class="col-12 ">
+                    <h3 class="fw-bold">Nhà thiết kế xuất sắc</h3>
+                    <p>Tìm hiểu về những nhà thiết kế huyền thoại đằng sau những sáng tạo đặc biệt của Tiffany. </p>
+                </div>              
+                <div class="col-md-4 col-sm-4 col-12 ">
+                    <div class="designer-img">
+                        <img src="image/Giới Thiệu/WOT-LP-Recirc1-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="designer-infor mt-3">
+                        <h5 class="fw-bold">Bộ sưu tập Elsa Peretti®</h5>
+                        <p>Rất hiếm khi một tác phẩm thiết kế nào đó có thể giữ được phong cách và vẻ đẹp trong nhiều thập kỷ, 
+                            nhưng đồ trang sức và đồ gia dụng của Elsa Peretti vẫn không thể nào quên bởi sự đơn giản và kết cấu của chúng.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="designer-img">
+                        <img src="image/Giới Thiệu/WOT-LP-Recirc2-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="designer-infor mt-3">
+                        <h5 class="fw-bold">Nguồn cảm hứng tự nhiên của Jean Schlumberger</h5>
+                        <p>Nhà thiết kế trang sức huyền thoại Jean Schlumberger sử dụng những sáng tạo giả tưởng đầy trí tuệ và trí tưởng tượng để biến những sinh vật tự nhiên đầy màu sắc thành những món đồ trang sức thú vị và lộng lẫy.    </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-4 col-12">
+                    <div class="designer-img">
+                        <img src="image/Giới Thiệu/WOT-LP-Recirc3-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="designer-infor mt-3">
+                        <h5 class="fw-bold">Bộ sưu tập Paloma Picasso®</h5>
+                        <p>Paloma Picasso rất giỏi trong việc nắm bắt vẻ đẹp bất ngờ và sử dụng màu sắc tươi sáng để thiết kế những món đồ trang sức thanh lịch và vượt thời gian.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-5 mb-5">
+        <div class="container-fluid">
+            <div class="row">      
+                <div class="col-md-4 col-12 px-3 align-self-center text-center">
+                    <h3 class="fw-bold">Cửa sổ giấc mơ Tiffany</h3>
+                    <p>Trong hơn một thế kỷ, những khung cửa sổ thơ mộng đã làm say đắm lòng người tại các cửa hàng Tiffany trên khắp thế giới. </p><br>
+                    <p>Ảnh của Ricky Zehavi</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <img src="image/Giới Thiệu/WOT-LP-FWMH5-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="Hide col-md-4 align-self-center ">
+                    <img src="image/Giới Thiệu/WOT-LP-FWMH5_2_-Desktop.jfif.jpg" alt="" style="max-width: 85%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner-6 mb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-7 col-12">
+                    <img src="image/Giới Thiệu/NSO-WOT-LP-FWMH-Store-Desktop.jpg" alt="" style="max-width: 100%; height: auto;">
+                </div>
+                <div class="col-md-5 col-12 px-3 align-self-center text-center">
+                    <h3 class="fw-bold">Cửa hàng Tiffany mới</h3>
+                    <p>Lễ khai trương cửa hàng hàng đầu của Tiffany trên Đại lộ số 5 ở New York: 
+                        lễ kỷ niệm những kiệt tác, tay nghề xuất sắc và những món đồ trang sức đẹp và hiếm nhất trên thế giới.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" >
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form action="#">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>
+    
+</body>
+</html>

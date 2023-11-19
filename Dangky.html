@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta charset="UTF-8">
+    <meta name="Dang Ky" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/Dangky.js" defer></script>
+    <link rel="stylesheet" href="css/stylechung.css">
+    <title>DangKy</title>
+    
+    <style>
+        .frm-main{
+            margin-top: 75px;
+        }
+        .form-group{
+            margin-top: 10px;      
+        }
+        .form-group h5{
+            font-size: 14px;       
+        }
+    </style>
+</head>
+<body>
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+    
+    <section class="frm-main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-sm-5 col-11">
+                    <h3>Tạo tài khoản</h3>
+                    <p>Đẩy nhanh quá trình thanh toán cho bạn, giúp bạn dễ dàng xem lịch sử đơn hàng và túi mua sắm cũng như quản lý
+                        hóa đơn điện tử</p>
+                       
+                    <form id="frmdangky">
+                        <div class="form-group">
+                            <label for="hovaten">Họ Và Tên</label>
+                            <input type="text" class="form-control" name="hovaten" id="hovaten" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="tendn">Tên Đăng Nhập</label>
+                            <input type="text" class="form-control" name="tendn"  id="tendn" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Mật Khẩu</label>
+                            <input type="password" class="form-control" name="password" id="password" required ></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" required ></input>
+                        </div>                         
+                        
+                        <div class="form-group">
+                            <label for="diachi">Địa Chỉ</label>
+                            <input type="diachi" class="form-control" name="diachi" id="diachi" required></input>
+                        </div> 
+                        
+                        <button class="btn btn-secondary mt-3" type="submit" value="dangky">Đăng Ký</button>
+                        
+                    </form> 
+                        <div class="form-group" style="font-family: 'Times New Roman', Times, serif;">
+                            <h5>Bạn đã có tài khoản Tiffany chưa? <a href="DangNhap.html" style="text-decoration: none;">Đăng nhập</a></h5>
+                        </div> 
+                </div>
+                <div class="col-md-6 col-sm-5 ">
+                    <img src="image/Menu/blue-box.jpg" width="600px">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer" >
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form action="#">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>
+    
+</body>
+</html>

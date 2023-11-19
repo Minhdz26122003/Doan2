@@ -1,0 +1,62 @@
+
+* .light-theme {
+    background-color: #ffffff;
+
+    color: #000000;
+
+}
+* .dark-theme {
+    background-color: #1a1a1a;
+    color: #bcbaba;
+}
+.light-theme .tabar {
+    background-color: rgb(255, 255, 255);
+    color:#000000;
+}
+
+.dark-theme .tabar {
+    background-color: #797979;
+    color: #ffffff;
+}
+.dark-theme input {
+    background-color: #dcd4d4;
+    color: #ffffff;
+} 
+.tabar button {
+    float: left;
+    padding-bottom: 20px;
+    text-align: start;
+}
+.menu-left i{
+    padding-right: 5px;
+}
+.nav button {
+    float: left;
+    font-weight: bold;
+    color: black;
+}
+.box-1{
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 20;
+}
+.box-1 .box-1-icon {
+    padding-right: 10px;
+}
+.box-2{
+    border-radius: 10px;
+    padding: 10px;
+}
+.box-2 .box-2-bot .box-2-bot-around{
+    display: flex;
+    justify-content: space-between;
+}
+.box-2 .box-2-bot .box-2-bot-left{
+    float: left;
+}
+.box-2 .box-2-bot .box-2-bot-right{
+    float: right;
+}

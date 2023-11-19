@@ -1,0 +1,20 @@
+{
+    "Loaisanpham": [     
+      {
+        "idloai":"L1" ,
+        "tenloai": "Dây chuyền"      
+      },
+      {
+        "idloai":"L2" ,
+        "tenloai": "Nhẫn"      
+      },
+      {
+        "idloai":"L3" ,
+        "tenloai": "Vòng tay"      
+      },
+      {
+        "idloai":"L4" ,
+        "tenloai": "Khuyên tai"      
+      }
+    ]
+}

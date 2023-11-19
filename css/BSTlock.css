@@ -1,0 +1,52 @@
+.link{
+    font-size:13px ;
+}
+.location{
+    margin-top: 10px;
+    padding: 20px;
+    background: #f7f5f5;
+}
+.search{
+    margin-top: 10px;
+}
+.product{
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.product .lock-info .name{    
+    display: -webkit-box;/* hiển thị định dạng box*/
+    -webkit-line-clamp: 2;  /* số dòng hiển thị */
+    -webkit-box-orient: vertical;/* thiết lập hướng của box là dọc*/
+    overflow: hidden;/*ẩn phần văn bản vượt quá kích thước của box*/
+    text-overflow: ellipsis;/*thêm dấu chấm ba chấm ở cuối văn bản bị cắt khi vượt quá số dòng được giới hạn*/
+}
+.product{
+    cursor: pointer;
+}
+
+.product .lock-info .price .old-price{
+    font-weight: normal;
+    font-size: 14px;
+    color: rgb(222, 24, 24);
+    text-decoration: line-through;
+}
+.product .lock-info .price .new-price{
+    font-weight: normal;
+    font-size: 16px;
+    color: rgb(222, 24, 24);
+}
+.product .lock-info button{
+    align-items: center;
+    font-size: 15px;
+}
+.lock-img img{
+    max-width: 100%;
+    height: auto;
+    border:1px solid #ebe7e7;
+    border-radius: 6px;
+}
+
+.lock-img img:hover{
+    transition: 0.5s ease;
+    transform: scale(1.2);
+}

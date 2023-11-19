@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" href="image/Menu/2023-LOCK2.webp" type="image/x-icon" >
+    <meta name="BstLock" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>    
+    <script src="Js/jquery-3.6.0.min.js" defer ></script>
+    <link rel="stylesheet" href="css/stylechung.css">
+    <link rel="stylesheet" href="css/trangchu.css">
+    <link rel="stylesheet" href="css/BSTlock.css">
+    <script src="Js/Locklocsp.js" defer></script>
+    <script src="Js/getsp.js" defer></script>
+    <script src="Js/Sort.js" defer></script>
+    <script src="Js/Cart.js" defer></script>
+   
+    <title>BST Lock</title>
+
+</head>
+<body class="overflow-x-hidden">
+    <section class="myheader"  style="border-top: rgb(64, 193, 193) 4px solid;" >   
+        <div class="header">
+            <nav class="navbar justify-content-between">
+                <div class="header-left ">
+                    <button class="d-md-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   
+                     <a class="ms-3" href="DangNhap.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #000000;"></i>
+                        <span id="tentkdn" style="font-family: Georgia, 'Times New Roman', sTimes, serif;font: weight 12px; color: #000000;">Sign in</span>
+                    </a>   
+                    
+                </div>
+                <div class="header-img" >
+                    <a href="Trangchu.html" class="navbar-brand">
+                        <img src="image/Menu/tiffany-logo_copy.png" alt="tiffany-logo" width="180px">
+                    </a>
+                </div>
+                <div class="header-right pe-2">
+                    <a class="link-light search" href="#">
+                        <input type="text" id="timkiem" style="border-radius: 6px; border-color: rgb(249, 245, 241);" size="5px">
+                        <i class="fa-solid fa-magnifying-glass pe-2" style="color: #000000;" >
+                        </i>
+                    </a>
+
+                    
+                    <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-cart-plus fa-lg"></i>
+                    </button>
+           
+                   <div class="offcanvas offcanvas-end text-bg-secondary collapse collapse-horizontal" tabindex="-1"
+                       id="offcanvasNavbar" style="width: 700px;">                       
+                           <div class="offcanvas-header">
+                               <h5 class="offcanvas-title">Giỏ Hàng</h5>
+                               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                   aria-label="Close" aria-hidden="true"></button>
+                           </div>
+                           <div class="offcanvas-body ">
+                               <table class="table-light table table-striped table-hover">
+                                   <thead>
+                                       <tr>
+                                           <th scope="col" class="img-title">Sản Phẩm</th>
+                                           <th scope="col" class="name-title">Tên</th>
+                                           <th scope="col" class="price-title">Giá</th>
+                                           <th scope="col" class="sl-title">Số Lượng</th>                                          
+                                           <th scope="col" class="btn-title"> </th>
+                                       </tr>   
+                                   </thead>
+                                   <tbody id="listCart">                                      
+                                       <tr> 
+                                            <!-- <td class="price">12150000</td> -->
+                                            <h5 class="text-light">Tổng tiền : <span class="link-underline-danger"  id="spTong"></span></h5>
+                                            <a href="Thanhtoan.html">
+                                                <button type="button" class="btn btn-danger justify-content-center">Thanh Toán</button>
+                                           </a>
+                                       </tr>
+                                    
+                                   </tbody>
+                               </table>
+                           </div>
+                   </div>
+        
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu">
+            <nav class="navbar navbar-expand-md ">
+                <div class="collapse navbar-collapse justify-content-center ms-5" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Daychuyen.html">Dây Chuyền</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Nhan.html">Nhẫn</a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Vongtay.html"  >Vòng Tay </a>
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Khuyentai.html">Khuyên Tai</a>
+                        </li>
+                       
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Bộ Sưu Tập</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="BstLock.html">Tiffany Lock</a>                                   
+                                </li>  
+                                <li class="dropdown-item">
+                                    <a href="#">Tiffany T</a>                                   
+                                </li>  
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-underline dropdown">
+                            <a class="nav-link" href="Giothieu.html">Giới Thiệu</a>                      
+                        </li>
+                        <li class="nav-item nav-underline">
+                            <a class="nav-link" href="Lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>       
+    </section>
+
+    <section class="video">
+        <div class="container-fluid ">
+            <div class="row justify-content-center align-items-center mx-3" >
+                 <div class="col-md-3 col-sm-12 col-11   float-start">
+                    <h4 class="fw-bolder text-center fs-3">Bộ sưu tập Tiffany Lock</h4>
+                    <p >
+                        Tình yêu có đó mà không có ổ khóa nào. 
+                        Thiết kế của dòng Tiffany Lock được lấy cảm hứng từ mẫu ổ khóa mang tính biểu tượng của thương hiệu từ những năm 1880, 
+                        tôn vinh sự kết nối cảm xúc không thể phá vỡ và truyền tải sức mạnh vô tận của tình yêu.
+                    </p>
+                </div>
+                <div class="col-md-9 col-sm-12 col-12">
+                    <video src="image/Lock/2023-LOCK2.0_BG-HERO-ROSE1-DESKTOP-1"  class="object-fit-fill border rounded " type="video/mp4" style="max-width: 100%; height: auto;" autoplay loop muted controls>
+                    </video>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="link">
+                    <a href="Trangchu.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                        Trang chủ
+                    </a>
+                    <span>
+                        <a href="BstLock.html" class="link-underline link-underline-opacity-10 link-underline-opacity-100-hover link-dark">
+                            / Bộ sưu tập Tiffany Lock
+                        </a>
+                    </span>
+                
+                </div>  
+                <div class="Sort">
+                    <span>Sắp Xếp Theo</span>
+                    <select id="priceFilter" onchange="sortProducts()">
+                        <option value="All">Tất cả sản phẩm</option>
+                        <option value="lowToHigh">Theo giá :Thấp đến Cao</option>
+                        <option value="highToLow">Theo giá :Cao đến Thấp</option>
+                        <option value="newest">Hàng Mới Nhất</option>
+                    </select>
+                </div> 
+                    
+        </div>
+    </section>
+
+    <section class="search">
+        <div class="container">
+            <div class="row">               
+                <div class="col-md-2 col-sm-11 col-11 bg-body-tertiary">
+                    <h4 class="pt-3 fw-bold">Bộ lọc tìm kiếm</h4><hr>
+                    <div class="loaitrangsuc py-2" id="loaitrangsuc">
+                        <h5>Loại Trang Sức</h5>
+                        <form id="loaitrangsuc-form">
+                            <input type="checkbox" class="form-check-input" name="loaitrangsuc" value="Vòng tay"> Vòng tay<br>
+                            <input type="checkbox" class="form-check-input" name="loaitrangsuc" value="Nhẫn"> Nhẫn<br>
+                            <input type="checkbox" class="form-check-input" name="loaitrangsuc" value="Dây chuyền"> Dây chuyền<br>
+                            <input type="checkbox" class="form-check-input" name="loaitrangsuc" value="Khuyên tai"> Khuyên tai<br>
+                        </form>
+                    </div>
+                    <hr>
+                    
+                    <div class="vatlieu py-2">
+                        <h5>Vật Liệu</h5>
+                        <form id="vatlieu-form">
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Vàng trắng"> Vàng trắng<br>
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Vàng hồng"> Vàng hồng<br>
+                            <input type="checkbox" class="form-check-input" name="vatlieu" value="Kim cương"> Kim cương<br>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="giaban py-2">
+                        <h5>Giá Bán</h5>
+                        <form id="giaban-form">  
+                            <input type="checkbox" class="form-check-input" name="giaban" value="4000000">Từ 4.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="6000000">Từ 6.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="8000000">Từ 8.000.000<br>
+                            <input type="checkbox" class="form-check-input" name="giaban" value="10000000">Từ 10.000.000<br>
+                        </form>
+                    </div><hr>
+                </div>
+
+                <div class="Lock-container col-md-10 col-sm-11 ">
+                   
+                    <div class="row justify-content-start" id="productList">        
+
+                        <!-- <div class="product lock col-md-3 col-sm-6 col-11" data-loai="Dây chuyền" data-vatlieu="Kim cương" data-giaban="8000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72791304_1060358_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Dây chuyền Tiffany Lock vàng hồng và kim cương 18K</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">9.000.000</span>
+                                    <span class="new-price float-end" >8.700.000<span> VND</span></span>
+                                </div>
+                                
+                                <button onclick="addToCart({id:'13',image:'image/Lock/tiffany-lock-72791304_1060358_ED.webp', price:8700000, name:'Dây chuyền Tiffany Lock vàng hồng và kim cương 18K'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"  data-loai="Vòng tay" data-vatlieu="Kim cương" data-giaban="10000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-70185385_1043536_ED_M.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Vòng tay kim cương vàng hồng Tiffany Lock 18K</header></div>
+                                
+                                <div class="price ">
+                                    <span class="old-price"> 14.500.000</span>
+                                    <span class="new-price float-end">14.000.000<span> VND</span></span >
+                                </div>
+                               
+                                <button onclick="addToCart({id:'14',image:'image/Lock/tiffany-lock-70185385_1043536_ED_M.webp', price:14000000, name:'Vòng tay kim cương vàng hồng Tiffany Lock 18K'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11" data-loai="Bông tai"  data-vatlieu="Kim cương" data-giaban="8000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72342798_1060349_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"> <header>Bông tai Tiffany Lock vàng hồng 18K và kim cương</header></div>
+                               
+                                <div class="price">
+                                    <span class="old-price">9.300.000</span>
+                                    <span class="new-price float-end">8.900.000<span> VND</span></span >
+                                </div>
+                                
+                                <button onclick="addToCart({id:'15',image:'image/Lock/tiffany-lock-72342798_1060349_ED.webp', price:8900000, name:'Bông tai Tiffany Lock vàng hồng 18K và kim cương'})" 
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+         
+                        <div class="product lock col-md-3 col-sm-6 col-11" data-loai="Nhẫn" data-vatlieu="Kim cương" data-giaban="4000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72343972_1060313_ED_M.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Nhẫn kim cương vàng hồng 18K Tiffany Lock Series</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">5.000.000</span>
+                                    <span class="new-price float-end">4.500.000<span> VND</span></span>
+                                </div>
+                               
+                                <button onclick="addToCart({id:'16',image:'image/Lock/tiffany-lock-72343972_1060313_ED_M.webp', price:4500000, name:'Nhẫn kim cương vàng hồng 18K Tiffany Lock Series'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+
+                        <div class="product lock col-md-3 col-sm-6 col-11" data-loai="Vòng cổ" data-vatlieu="Vàng hồng" data-giaban="4000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-ros-73366054_1060188_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Vòng cổ nhỏ bằng vàng hồng 18K với ngọc bích màu hồng</header></div>
+                                
+                                <div class="price">
+                                    <span class="old-price">5.000.000</span> 
+                                    <span class="new-price float-end">4.400.000<span> VND</span></span >
+                                </div>
+                               
+                                <button onclick="addToCart({id:'17',image:'image/Lock/tiffany-lock-ros-73366054_1060188_ED.webp', price:4400000, name:'Vòng cổ nhỏ bằng vàng hồng 18K với ngọc bích màu hồng'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Vòng tay" data-vatlieu="Vàng hồng" data-giaban="10000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-ros-edition-73965292_1062354_ED_M.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Vòng tay cỡ lớn với đá sapphire màu hồng dát vàng hồng </header></div>
+                                <div class="price">
+                                    <span class="old-price">19.000.000</span>
+                                    <span class="new-price float-end">18.000.000<span> VND</span></span >
+                                </div>
+                               
+                                <button onclick="addToCart({id:'18',image:'image/Lock/tiffany-lock-ros-edition-73965292_1062354_ED_M.webp', price:18000000, name:'Vòng tay cỡ lớn với đá sapphire màu hồng dát vàng hồng '})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Bông tai" data-vatlieu="Vàng hồng" data-giaban="8000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-ros-edition-73965942_1062526_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                               <div class="name"> <header>Bông tai cỡ vừa bằng vàng hồng 18K đính đá sapphire hồng</header></div>
+                                <div class="price">
+                                    <span class="old-price">8.999.000</span>
+                                    <span class="new-price float-end">8.000.000<span> VND</span></span >
+                                </div>
+                                <button onclick="addToCart({id:'19',image:'image/Lock/tiffany-lock-ros-edition-73965942_1062526_ED.webp', price:8000000, name:'Bông tai cỡ vừa bằng vàng hồng 18K đính đá sapphire hồng'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button>
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Dây chuyền" data-vatlieu="Vàng hồng" data-giaban="6000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-ros-edition-73965969_1062099_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Dây chuyền cỡ vừa bằng vàng hồng 18K đính đá sapphire hồng</header></div>                               
+                                <div class="price">
+                                     <span class="old-price">8.930.000</span> 
+                                     <span class="new-price float-end">7.930.000<span> VND</span></span>
+                                </div>
+                                <button onclick="addToCart({id:'20',image:'image/Lock/tiffany-lock-ros-edition-73965942_1062526_ED.webp', price:7930000, name:'Dây chuyền cỡ vừa bằng vàng hồng 18K đính đá sapphire hồng'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Dây chuyền" data-vatlieu="Vàng trắng" data-giaban="8000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72791339_1060363_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Dây chuyền Tiffany Lock vàng trắng và kim cương 18K</header></div>
+                                <div class="price">
+                                    <span class="old-price">9.990.000</span>
+                                      <span class="new-price float-end">9.100.000<span> VND</span></span >
+                                </div>
+                              
+                                <button onclick="addToCart({id:'21',image:'image/Lock/tiffany-lock-72791339_1060363_ED.webp', price:9100000, name:'Dây chuyền Tiffany Lock vàng trắng và kim cương 18K'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Vòng tay" data-vatlieu="Vàng trắng" data-giaban="10000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72345371_1060317_ED_M.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name">
+                                    <header>Vòng tay kim cương vàng trắng 18K dòng Tiffany Lock</header>
+                                </div>
+                               
+                                <div class="price">
+                                    <span class="old-price">15.500.000</span>
+                                    <span class="new-price float-end">14.800.000<span> VND</span></span >
+                                </div>
+                                
+                                <button onclick="addToCart({id:'22',image:'image/Lock/tiffany-lock-72345371_1060317_ED_M.webp', price:14800000, name:'Vòng tay kim cương vàng trắng 18K dòng Tiffany Lock'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Bông tai" data-vatlieu="Vàng trắng" data-giaban="6000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72342887_1061466_ED.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Bông tai Tiffany Lock vàng trắng 18K, vừa</header></div>
+                                <div class="price">
+                                    <span class="old-price">7.000.000</span>
+                                    <span class="new-price float-end">6.000.000<span> VND</span></span >
+                                </div>
+                                
+                                <button onclick="addToCart({id:'23',image:'image/Lock/tiffany-lock-72342887_1061466_ED.webp', price:6000000, name:'Bông tai Tiffany Lock vàng trắng 18K, vừa'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div>
+
+                        <div class="product lock col-md-3 col-sm-6 col-11"data-loai="Nhẫn" data-vatlieu="Vàng trắng" data-giaban="4000000">
+                            <div class="lock-img">
+                                <img src="image/Lock/tiffany-lock-72345371_1060317_ED_M.webp" alt="">
+                            </div>
+                            <div class="lock-info">
+                                <div class="name"><header>Nhẫn kim cương vàng trắng 18K Tiffany Lock Series</header></div>
+                                <div class="price">
+                                    <span class="old-price">5.550.000</span>
+                                    <span class="new-price float-end">4.774.000<span> VND</span></span >
+                                </div>
+                                
+                                <button onclick="addToCart({id:'24',image:'image/Lock/tiffany-lock-72345371_1060317_ED_M.webp', price:4774000, name:'Nhẫn kim cương vàng trắng 18K Tiffany Lock Series'})"
+                                class="btn btn-dark btn-outline-info">Thêm Vào Giỏ</button >
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                  
+                    <nav class="my-5" aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                          </li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link link-dark" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link link-dark" href="#">Next</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video2">
+        <div class="container-fluid ">
+            <div class="row justify-content-center align-items-center mx-2 mt-4" >
+                <div class="col-md-8 col-sm-12 col-12">
+                    <video src="image/Lock/2023-LOCK2.0_BG-CGI-BRACELETS-DESKTOP-1"  class="object-fit-fill border rounded " type="video/mp4" style="max-width: 100%; height: auto;" autoplay loop muted controls>
+                    </video>
+                </div>
+                 <div class="col-md-4 col-sm-12 col-11">
+                    <h4 class="fw-bolder text-center fs-3">Dẫn đầu xu hướng</h4>
+                    <p >                      
+                        Ổ khóa đã thu hút trí tưởng tượng của các thợ thủ công Tiffany từ những năm 1880. 
+                        Tác phẩm pha trộn Tiffany Lock kết hợp sự sáng tạo và vẻ đẹp nghệ thuật, sử dụng các kỹ năng độc đáo của Tiffany để diễn giải mẫu ổ khóa. 
+                        Chiếc móc cài vòng tay nguyên bản và độc đáo này đã được các thợ thủ công chế tạo trong một năm để đóng mở một cách trang nhã như một ổ khóa. 
+                        Biểu tượng của tình yêu đích thực này được chế tác từ vàng 18K được đánh bóng tinh xảo và những viên kim cương được dát bằng tay để tạo nên sự rực rỡ rực rỡ.
+                    </p>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="video3">
+        <div class="container-fluid ">
+            <div class="row justify-content-center align-items-center mx-2 mt-4" >
+                
+                 <div class="col-md-4 col-sm-12 col-11">
+                    <h4 class="fw-bolder text-center fs-3">Được giới thiệu vào năm 1883. Thương hiệu mới cho năm 2023.</h4>
+                    <p>   
+                        Sáng tạo lấy cảm hứng từ ổ khóa đầu tiên trong Bộ sưu tập Tiffany là một chiếc trâm cài hình ổ khóa cũng được tô điểm bằng một chiếc chìa khóa.
+                        Tác phẩm này được chế tác từ vàng và thép bởi các thợ thủ công của Tiffany. 
+                        Vào năm 1883, một người chồng đã tặng vật này cho người vợ yêu quý của mình, trên đó có khắc cụm từ tiếng Latinh “Fide et Amore”, có nghĩa là “sự cam kết không lay chuyển”. 
+                        140 năm sau, bộ sưu tập Tiffany Lock tri ân mẫu ổ khóa của thương hiệu Tiffany, tượng trưng cho tình yêu lâu bền vốn là mục đích cốt lõi của Tiffany kể từ khi thành lập vào năm 1837.                   
+                    </p>
+                </div>
+                <div class="col-md-8 col-sm-12 col-12">
+                    <video src="image/Lock/Lock_Makingof_16x9_6s.mp4"  class="object-fit-fill border rounded " type="video/mp4" style="max-width: 100%; height: auto;" autoplay loop muted controls>
+                    </video>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+      
+    <section class="hint">
+        <div class="container">
+            <div  class="mt-5">
+                <h4 class="text-center fw-bold " >Cửa hàng theo thể loại</h4>
+                <h5 class="text-center " style="font-size:13px;">Thiết kế nổi bật và tay nghề tinh tế.</h5>
+            </div>
+            <div class="row mt-5 justify-content-center">                                
+                <div class="pro-list col-md-4 col-sm-4 col-11 text-center">
+                    <a href="#"  class="link-body-emphasis link-underline-opacity-0 link-dark"> 
+                        <img src="image/Menu/Rings.webp" alt="">
+                        <h5>Nhẫn</h5>
+                    </a>
+                    
+                </div>
+                <div class="pro-list col-md-4 col-sm-4 col-11 text-center">
+                    <a href="#" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Menu/Earrings.webp" alt="">
+                        <h5>Khuyên tai</h5>
+                    </a>
+                    
+                </div>
+                <div class="pro-list col-md-4 col-sm-4 col-11 text-center">
+                    <a href="#" class="link-body-emphasis link-underline-opacity-0 link-dark">
+                        <img src="image/Menu/Bracelet.webp" alt="">
+                        <h5>Vòng tay</h5>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" >
+        <div class="row info">            
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Chăm Sóc Khách Hàng</h4>
+                <h5><a href="#">liên hệ chúng tôi</a></h5>
+                <h5 ><a href="#">Các câu hỏi thường gặp</a></h5>
+                <h5 ><a href="#">Thông tin vận chuyển và trả lại</a></h5>
+                <h5 ><a href="#">Đặt dịch vụ tư vấn kim cương</a></h5>
+                <h5 ><a href="#">Danh mục tác phẩm</a></h5>
+                <h5 ><a href="#">Bảo hành sản phẩm </a></h5>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4 >Công ty của chúng tôi</h4>
+                <h5><a href="#">Thế giới của Tiffany</a></h5>
+                <h5 ><a href="#">Chính sách bán hàng</a></h5>
+                <h5 ><a href="#">Chính sách trang web và tuyên bố pháp lý</a></h5>
+                <h5 ><a href="#">Chỉ mục trang web</a></h5>
+                
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11">
+                <h4>Mạng Xã Hội</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i>
+                    <i class="fa-brands fa-twitter fa-xl" style="color: #0077ff;"></i>
+                    <i class="fa-brands fa-pinterest fa-xl" style="color: #ba2126;"></i>           
+                </div>
+
+                <h4 class="mt-5">Payment</h4>
+                <div>
+                    <img src="image/Menu/payment1.png" alt="">
+                    <img src="image/Menu/payment2.png" alt="">
+                    <img src="image/Menu/payment3.png" alt="">
+                    <img src="image/Menu/payment4.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-11 tintuc ">
+                <h4>                  
+                    Tin tức mới nhất của Tiffany </h4>
+                <h5> Hãy là người đầu tiên biết về các thiết kế mới thú vị, sự kiện đặc biệt, khai trương cửa hàng mới và hơn thế nữa.</h5>
+                <form action="#">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <a href="Đăng ký.html">
+                        <button type="button" class="dk btn btn-secondary my-3">Đăng Ký</button>
+                    </a>
+                </form>
+            </div>
+        </div>       
+    </section>   
+
+</body>
+
+<script>
+   function getnametk() {
+    var user = JSON.parse(localStorage.getItem('userLogin'));
+    if(user){
+        document.getElementById('tentkdn').textContent=user.tendn;
+
+    }
+    
+
+    // var imageSrc = user.anh;
+    // if (imageSrc) {
+    //     document.getElementById('imglogin').src = imageSrc;
+    // }
+    
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Gọi hàm loadProducts để hiển thị sản phẩm
+        loadProducts(46,58); // Điều chỉnh startIndex và endIndex theo nhu cầu của bạn
+    });
+</script> 
+</html>
